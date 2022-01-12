@@ -71,7 +71,7 @@ let movingBike = document.querySelector('.bike-moving')
 window.addEventListener('scroll', function () {
   let scrollPositionY = window.pageYOffset;
   let addMarginTop = (scrollPositionY / window.innerWidth) * 100;
-  console.log(addMarginTop);
+  // console.log(addMarginTop);
 
   if (addMarginTop < 14) {
     movingBike.style.display = 'none'
@@ -81,8 +81,21 @@ window.addEventListener('scroll', function () {
   for (let i = 14; i <= 155; i++) {
     if (Math.floor(addMarginTop) == i) {
       let position = i - 14;
-      console.log(movingBike.style.right);
+      // console.log(movingBike.style.right);
       movingBike.style.right = `${percent[position]}%`
+      if (position < 8) {
+        bikeRotate(1)
+      } else if (position >= 8 && position < 23) {
+        bikeRotate(0)
+      } else if (position >= 23 && position < 59) {
+        bikeRotate(1)
+      } else if (position >= 59 && position < 95) {
+        bikeRotate(0)
+      } else if (position >= 95 && position < 137) {
+        bikeRotate(1)
+      } else {
+        bikeRotate(0)
+      }
     }
   }
   if (addMarginTop >= 14 && addMarginTop <= 155) {
@@ -106,3 +119,11 @@ billboard.addEventListener('mouseenter', function () {
 grass.addEventListener('mouseleave', function () {
   billboard.style.display = 'none'
 })
+
+function bikeRotate(index) {
+  if (index === 0) {
+    movingBike.style.transform = 'rotateY(0deg)'
+  } else {
+    movingBike.style.transform = 'rotateY(-180deg)'
+  }
+}
