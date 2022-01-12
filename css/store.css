@@ -94,15 +94,15 @@
   margin-bottom: 0;
   color: #000000;
   text-align: center;
-  perspective: 50em;
   -webkit-perspective: 50em;
+          perspective: 50em;
 }
 
 .omiyage .row:nth-child(2) .col figure.goods * {
-  box-sizing: padding-box;
   -webkit-box-sizing: padding-box;
-  transition: all 0.2s ease-out;
+          box-sizing: padding-box;
   -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .omiyage .row:nth-child(2) .col figure.goods .img {
@@ -163,27 +163,26 @@
   left: 20px;
   display: block;
   background-color: #ffffff;
-  transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
-  transform: rotateX(-90deg);
+  transition: all 0.4s ease-in-out;
   -webkit-transform: rotateX(-90deg);
-  transform-origin: 50% 50%;
+          transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   opacity: 0;
 }
 
 .omiyage .row:nth-child(2) .col figure.goods:hover figcaption, .omiyage .row:nth-child(2) .col figure.goods .hover figcaption {
-  transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  transition-delay: 0.2s;
+          transform: translateY(-50%);
   -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   opacity: 1;
 }
 
 .omiyage .row:nth-child(2) .col figure.goods:hover:after, .omiyage .row:nth-child(2) .col figure.goods .hover:after {
-  transform: rotateX(0);
   -webkit-transform: rotateX(0);
+          transform: rotateX(0);
   opacity: 0.9;
 }
 

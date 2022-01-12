@@ -109,13 +109,10 @@ $goods-img: 'https://dummyimage.com/300x300';
             color: #000000;
             text-align: center;
             perspective: 50em;
-            -webkit-perspective: 50em;
 
             * {
                 box-sizing: padding-box;
-                -webkit-box-sizing: padding-box;
                 transition: all 0.2s ease-out;
-                -webkit-transition: all 0.2s ease-out;
             }
 
             .img {
@@ -177,27 +174,20 @@ $goods-img: 'https://dummyimage.com/300x300';
                 display: block;
                 background-color: #ffffff;
                 transition: all 0.4s ease-in-out;
-                -webkit-transition: all 0.4s ease-in-out;
                 transform: rotateX(-90deg);
-                -webkit-transform: rotateX(-90deg);
                 transform-origin: 50% 50%;
-                -webkit-transform-origin: 50% 50%;
-                -ms-transform-origin: 50% 50%;
                 opacity: 0;
             }
 
             &:hover, .hover {
                 figcaption {
                     transform: translateY(-50%);
-                    -webkit-transform: translateY(-50%);
                     transition-delay: 0.2s;
-                    -webkit-transition-delay: 0.2s;
                     opacity: 1;
                 }
 
                 &:after {
                     transform: rotateX(0);
-                    -webkit-transform: rotateX(0);
                     opacity: 0.9;
                 }
             }
