@@ -1,0 +1,811 @@
+$side-length: 40px; // 邊長
+$border-wb: 34.64101px*1.005;   // 高:根號3除以2*邊長 !需細調參數1.005
+$bottom-tfo-y: 28.28426px*1.005; // 半高:高平方-(邊長/2)平方 開根號 !需細調參數1.005
+$bottom-tf-tl-Y: -54.14213px*0.973;   // (-邊長+半高/2) !需細調參數0.973
+
+$spin-time: 5s;
+
+$grey-light-1: #F5F5F5;
+$grey-light-2: #E8E8E8;
+$grey-light-3: #DEDEDE;
+$grey-light-4: #D4D4D4;
+
+$grey-dark-1: #C9C9C9;
+$grey-dark-2: #BFBFBF;
+$grey-dark-3: #B5B5B5;
+$grey-dark-4: #ABABAB;
+
+@mixin triangle {
+    // -- ver1
+    width: 0;
+    height: 0;
+    border: {
+        style: solid;
+        width: 0 $side-length/2 $border-wb;
+    }
+    // -- ver2
+    // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    // background-color: #ffffff;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+$colorBg: #222a30;
+$colorOutline: #ffffff;
+$colorOutlineFade: #4e5559;
+
+$widthMouse: 52px;
+$heightMouse: 88px;
+$borderMouse: 6px;
+
+$posMouse: 8px;
+$posText: 1.5rem;
+
+$sizeTrackball: 10px;
+$posTrackball: 20px;
+$shrinkTrackball: 0.4;
+
+$animDuration: 5s;
+
+@mixin bgGradient {
+    background:
+    $colorOutlineFade
+    linear-gradient(
+        transparent 0%,
+        transparent 50%,
+        $colorOutline 50%,
+        $colorOutline 100%
+    );
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10000px;//頁面長度
+    background: linear-gradient(0deg,rgb(58, 49, 90), #facd6d, #cfe6f9);
+    //快速前進按鈕
+    .skip-btn{
+        position: fixed;
+        top: 50vh;
+        right: 2vw;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        font-size: 30px;
+        border: 4px #fff solid;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    //畫面
+    .veiw {
+        
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1800px;//寬度
+        min-width: 1600px;//高度
+        min-height: 90vh;
+        overflow: hidden;
+        border: 3px #000 solid;
+        // background: linear-gradient(0deg, #1f2644, #cdebff);
+        //捲動提示
+        .scroll-tip{
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            width: 400px;
+            height: 300px;
+            line-height: 200px;
+            background-image: url('/img/biking/banner-back.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            .mouse {
+                @include bgGradient;
+                position: absolute;
+                left: 50%;
+                width: $widthMouse;
+                height: $heightMouse;
+                border-radius: 100px;
+                background-size: 100% 200%;
+                text-align: center;
+                font-size: $posText;
+                animation: 
+                    colorSlide $animDuration linear infinite,
+                    nudgeMouse $animDuration ease-out infinite;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0; right: 0; bottom: 0; left: 0;
+                    margin: auto;
+                }
+                &:before {
+                    width: $widthMouse - $borderMouse;
+                    height: $heightMouse - $borderMouse;
+                    background-color: $colorBg;
+                    border-radius: 100px;
+                }
+                &:after {
+                    background-color: $colorOutline;
+                    width: $sizeTrackball;
+                    height: $sizeTrackball;
+                    border-radius: 100%;
+                    animation: trackBallSlide $animDuration linear infinite;
+                }
+            }
+            @keyframes colorSlide { 
+                0% { background-position: 0% 100%; }
+                20% { background-position: 0% 0%; }
+                21% { background-color: $colorOutlineFade; }
+                29.99% { 
+                    background-color: $colorOutline;
+                    background-position: 0% 0%;
+                }
+                30% { 
+                    background-color: $colorOutlineFade;
+                    background-position: 0% 100%;
+                }
+                50% { background-position: 0% 0%; }
+                51% { background-color: $colorOutlineFade; }
+                59% { 
+                    background-color: $colorOutline;
+                    background-position: 0% 0%;
+                }
+                60% { 
+                    background-color: $colorOutlineFade;
+                    background-position: 0% 100%;
+                }
+                80% { background-position: 0% 0%; }
+                81% { background-color: $colorOutlineFade; }
+                90%, 100% { background-color: $colorOutline; }
+            }
+            @keyframes trackBallSlide {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+                6% { 
+                    opacity: 1;
+                    transform: scale(0.9) translateY($posTrackball/4);
+                }
+                14% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+                }
+                15%, 19% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+                }
+                28%, 29.99% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+                30% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+                36% { 
+                    opacity: 1;
+                    transform: scale(0.9) translateY($posTrackball/4);
+                }
+                44% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+                }
+                45%, 49% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+                }
+                58%, 59.99% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+                60% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+                66% { 
+                    opacity: 1;
+                    transform: scale(0.9) translateY($posTrackball/4);
+                }
+                74% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+                }
+                75%, 79% {
+                    opacity: 0;
+                    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+                }
+                88%, 100% {
+                    opacity: 1;
+                    transform: scale(1) translateY(-$posTrackball);
+                }
+            }
+            
+            @keyframes nudgeMouse {
+                0% { transform: translateY(0); }
+                20% { transform: translateY($posMouse); }
+                30% { transform: translateY(0); }
+                50% { transform: translateY($posMouse); }
+                60% { transform: translateY(0); }
+                80% { transform: translateY($posMouse); }
+                90% { transform: translateY(0); }
+            }
+            
+            @keyframes nudgeText {
+                0% { transform: translateY(0); }
+                20% { transform: translateY($posText); }
+                30% { transform: translateY(0); }
+                50% { transform: translateY($posText); }
+                60% { transform: translateY(0); }
+                80% { transform: translateY($posText); }
+                90% { transform: translateY(0); }
+            }
+            
+            @keyframes colorText { 
+                21% { color: $colorOutlineFade; }
+                30% { color: $colorOutline; }
+                51% { color: $colorOutlineFade; }
+                60% { color: $colorOutline; }
+                81% { color: $colorOutlineFade; }
+                90% { color: $colorOutline; }
+            }
+            h3{
+                position: absolute;
+                bottom: 10%;
+                left: 130px;
+                font-size: 24px;
+                font-weight: 900;
+            }
+        }
+        .road {
+            position: absolute;
+            width: 120%;
+            height: 160px;
+            bottom: 10%;
+            background-color: #525252;
+            transform-origin: bottom;
+            transform-style: preserve-3d;
+            transform: perspective(500px) rotateX(30deg);
+            .line {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 120%;
+                height: 10px;
+                background: linear-gradient(90deg, #fff 0%, #525252 70%, #525252 100%);
+                background-size: 120px;
+            }
+            .shadow {
+                position: absolute;
+                bottom: -92px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 95%;
+                height: 60px;
+                background: linear-gradient(#000, transparent);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 120%;
+                height: 30px;
+                background: #333;
+                bottom: -30px;
+                transform-origin: top;
+                transform: perspective(500px) rotateX(-25deg);
+            }
+        }
+        .camera {
+            position: absolute;
+            z-index: 10;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: $side-length*2;
+            height: $side-length*2;
+            perspective: 1500px;
+            perspective-origin: 50% -50%;
+            -moz-perspective: 1500px;
+            -moz-perspective-origin: 50% -50%;
+            -webkit-perspective: 1500px;
+            -webkit-perspective-origin: 50% -50%;
+            /*按鈕選單*/
+            .menu {
+                position: absolute;
+                z-index: 0;
+                top: 70%;
+                left: 47%;
+                transform: translate(-50%, -50%) ;
+                width: 400px;
+                height: 400px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                li {
+                    position: absolute;
+                    z-index: 10;
+                    left: 20px;
+                    list-style-type: none;
+                    font-size: 40px;
+                    /*迴轉半徑*/
+                    transform-origin: 180px;
+                    transition: .4s;
+                    transition-delay: calc(.05s * var(--i));
+                    transform: rotate(120deg) translateX(150px);
+                    a {
+                        position: relative;
+                        z-index: 15;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 0px;
+                        height: 0px;
+                        color: transparent;
+                        border-radius: 50%;
+                        transform: rotate(calc(130deg * var(--i)));
+                        transition: .5s;
+                    }
+                    .toggle {
+                        position: absolute;
+                        width: 60px;
+                        height: 60px;
+                        background: transparent;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 10;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        font-size: 2em;
+                        transition: transform 1s;
+                    }
+                }
+
+                &.active{
+                    li {
+                        transform: rotate(calc(360deg / 6 * var(--i)));
+                        
+                        a{
+                            width: 60px;
+                            height: 60px;
+                            color: #000;
+                            background-color: #fff;
+                        }
+                    }
+                    .toggle {
+                        transform:  rotate(315deg);
+                    }
+                } 
+                
+            } 
+            
+            &:hover .menu {
+                display: flex;
+            }
+        }
+        
+        .space {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-origin: center center (-$side-length/2);
+            transform-style: preserve-3d;
+            animation: spin-pointer $spin-time linear infinite;
+            -moz-transform-origin: center center (-$side-length/2);
+            -moz-transform-style: preserve-3d;
+            -moz-animation: spin-pointer $spin-time linear infinite;
+            -webkit-transform-origin: center center (-$side-length/2);
+            -webkit-transform-style: preserve-3d;
+            -webkit-animation: spin-pointer $spin-time linear infinite;
+        
+            div {
+                position: absolute;
+            }
+        
+            &:hover, &:active, &:focus {
+                animation-play-state: paused;
+                -moz-animation-play-state: paused;
+                -webkit-animation-play-state: paused;
+                cursor: pointer;
+            
+                .box1, .box2 {
+                    div {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+        
+        .box1, .box2 {
+            transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        
+            div {
+                @include triangle;
+                opacity: 0.4;
+            }
+        }
+        
+        .box2 {
+            transform: rotateX(180deg) translateY($bottom-tf-tl-Y);
+            transform-origin: center $bottom-tfo-y (-$side-length/2);
+            -moz-transform: rotateX(180deg) translateY($bottom-tf-tl-Y);
+            -moz-transform-origin: center $bottom-tfo-y (-$side-length/2);
+            -webkit-transform: rotateX(180deg) translateY($bottom-tf-tl-Y);
+            -webkit-transform-origin: center $bottom-tfo-y (-$side-length/2);
+        }
+        
+        .face1 {
+            border-color: transparent transparent $grey-light-1;
+            transform: translateX($side-length/2) translateY($side-length/2) rotateX(35.26439deg);
+            transform-origin: center bottom;
+            -moz-transform: translateX($side-length/2) translateY($side-length/2) rotateX(35.26439deg);
+            -moz-transform-origin: center bottom;
+            -webkit-transform: translateX($side-length/2) translateY($side-length/2) rotateX(35.26439deg);
+            -webkit-transform-origin: center bottom;
+        }
+        
+        .face2 {
+            border-color: transparent transparent $grey-light-2;
+            transform: translateX($side-length/2) translateY($side-length/2) rotateY(-90deg) rotateX(-35.26439deg);
+            transform-origin: right bottom;
+            -moz-transform: translateX($side-length/2) translateY($side-length/2) rotateY(-90deg) rotateX(-35.26439deg);
+            -moz-transform-origin: right bottom;
+            -webkit-transform: translateX($side-length/2) translateY($side-length/2) rotateY(-90deg) rotateX(-35.26439deg);
+            -webkit-transform-origin: right bottom;
+        }
+        
+        .face3 {
+            border-color: transparent transparent $grey-light-3;
+            transform: translateX($side-length/2) translateY($side-length/2) translateZ(-$side-length) rotateX(-35.26439deg);
+            transform-origin: left bottom;
+            -moz-transform: translateX($side-length/2) translateY($side-length/2) translateZ(-$side-length) rotateX(-35.26439deg);
+            -moz-transform-origin: left bottom;
+            -webkit-transform: translateX($side-length/2) translateY($side-length/2) translateZ(-$side-length) rotateX(-35.26439deg);
+            -webkit-transform-origin: left bottom;
+        }
+        
+        .face4 {
+            border-color: transparent transparent $grey-light-4;
+            transform: translateX($side-length/2) translateY($side-length/2) rotateY(90deg) rotateX(-35.26439deg);
+            transform-origin: left bottom;
+            -moz-transform: translateX($side-length/2) translateY($side-length/2) rotateY(90deg) rotateX(-35.26439deg);
+            -moz-transform-origin: left bottom;
+            -webkit-transform: translateX($side-length/2) translateY($side-length/2) rotateY(90deg) rotateX(-35.26439deg);
+            -webkit-transform-origin: left bottom;
+        }
+        
+        .box2 {
+            .face1 {
+                border-color:transparent transparent $grey-dark-3;
+            }
+        
+            .face2 {
+                border-color:transparent transparent $grey-dark-2;
+            }
+        
+            .face3 {
+                border-color:transparent transparent $grey-dark-1;
+            }
+        
+            .face4 {
+                border-color:transparent transparent $grey-dark-4;
+            }
+        }
+        
+        @keyframes spin-pointer {
+            0% {
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(-359.9deg);
+            }
+        }
+        @-moz-keyframes spin-pointer {
+            0% {
+                -moz-transform: rotateY(0);
+            }
+            100% {
+                -moz-transform: rotateY(-359.9deg);
+            }
+        }
+        @-webkit-keyframes spin-pointer {
+            0% {
+                -webkit-transform: rotateY(0);
+            }
+            100% {
+                -webkit-transform: rotateY(-359.9deg);
+            }
+        }
+        .bike{
+            position: absolute;
+            bottom: 12%;
+            z-index: 4;
+            width: calc(2240px / 8) ;
+            height: 233px;
+            background-image: url('/img/biking/bike-v5.png');
+            transform: perspective(800px)  translate(0px,-60px);
+            -webkit-box-reflect: below 1px linear-gradient(transparent 90%,#0004);
+            animation: animateBiking 3s steps(8) infinite;
+        }
+        @keyframes animateBiking {
+            from{
+                background-position: 0 ;
+            }
+            to{
+                background-position: -2240px;
+            }
+        }
+        .cloud {
+            position: absolute;
+            z-index: -1;
+            top: -100px;
+            width: 500px;
+            height: 200px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            
+        }
+        .cloud-1{
+            background-image: url('/img/biking/cloud-01.png');
+            right: -700px;
+        }
+        .cloud-2{
+            background-image: url('/img/biking/cloud-14.png');
+            width: 800px;
+            right: -200px;
+        }
+        .cloud-3{
+            background-image: url('/img/biking/cloud-03.png');
+            right: -1200px;
+        }
+        .cloud-3{
+            background-image: url('/img/biking/cloud-04.png');
+            top: 0px;
+            right: -900px;
+        }
+        .tree {
+            width: 200px;
+            height: 250px;
+            position: absolute;
+            bottom: 24%;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .tree-1{
+            background-image: url('/img/biking/tree-01.png');
+        }
+        .tree-2{
+            width: 250px;
+            background-image: url('/img/biking/tree-03.png');
+        }
+        .tree-3{
+            height: 270px;
+            background-image: url('/img/biking/tree-05.png');
+        }
+        .tree-4{
+            width: 400px;
+            height: 400px;
+            background-image: url('/img/biking/tree-04.png');
+        }
+        .tree-5{
+            height: 300px;
+            width: 250px;
+            background-image: url('/img/biking/tree-07.png');
+        }
+        .tree-6{
+            height: 400px;
+            background-image: url('/img/biking/tree-09.png');
+        }
+        .tree-7{
+            height: 500px;
+            width: 300px;
+            background-image: url('/img/biking/tree-11.png');
+        }
+        .tree-8{
+            height: 300px;
+            background-image: url('/img/biking/tree-12.png');
+        }
+        .tree-9{
+            height: 320px;
+            width: 300px;
+            background-image: url('/img/biking/tree-13.png');
+        }
+        @for $i from 1 through 9 {
+            .tree.tree-#{$i}{
+                right: 0px + ( $i *-300px);
+                transform: translateX(random($limit:9) *$i * -400px);
+            }
+        }
+        .grass{
+            position: absolute;
+            bottom: 2%;
+            width: 100px;
+            height: 150px;
+            z-index: 6;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .grass-1{
+            background-image: url('/img/biking/grass-02.png');
+            right: 200px;
+
+        }
+        .grass-2{
+            width: 200px;
+            background-image: url('/img/biking/grass-03.png');
+            right: 0;
+
+        }
+        .grass-3{
+            width: 300px;
+            background-image: url('/img/biking/grass-08.png');
+            right: -1300px;
+
+        }
+        .grass-4{
+            width: 400px;
+            background-image: url('/img/biking/grass-11.png');
+            right: -1800px;
+
+        }
+        .grass-5{
+            width: 300px;
+            background-image: url('/img/biking/grass-12.png');
+            right: -1000px;
+        }
+        .grass-6{
+            width: 300px;
+            background-image: url('/img/biking/grass-07.png');
+            left: 0;
+        }
+        .grass-7{
+            width: 300px;
+            background-image: url('/img/biking/grass-09.png');
+            left: 500px;
+        }
+        @for $i from 1 through 5 {
+            .grass.grass-#{$i}{
+                right: 0px + ( $i *-300px);
+            }
+        }
+        .none{
+            display: none;
+        }
+        .mountain {
+            position: absolute;
+            bottom: -35%;
+            z-index: -2;
+            width: 1800px;
+            height: 1200px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .mountain-1{
+            background-image: url('/img/biking/mountain-04.png');
+            right: -2000px;
+        }
+        .mountain-2{
+            background-image: url('/img/biking/mountain-05.png');
+            right: -4800px;
+        }
+        .brige{
+            position: absolute;
+            bottom: -45%;
+            right: -3000px;
+            z-index: 7;
+            width: 1640px;
+            height: 1200px;
+            background-image: url('/img/biking/bridge-02.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .info{
+            position: absolute;
+            left: 50%;
+            z-index: 10;
+            width: 0px;
+            height: 0px;
+            background-color: rgba(255, 255, 255, 0.703);
+            transition: .5s;
+            
+        }
+        .info.open{
+            z-index: 12;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 500px;
+            border: 4px #fa0 solid;
+            text-align: center;
+            color: #000;
+            font-size: 20px;
+        }
+        .marker{
+            position: absolute;
+            z-index: 8;
+            top:20%;
+            width: 80px;
+            height: 108px;
+            background-image: url('/img/biking/landmark-01.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            // cursor: pointer;
+        }
+        .marker-1{
+            right: -400px;
+        }
+        .marker-2{
+            right: -1700px;
+        }
+        .marker-3{
+            right: -3400px;
+        }
+        .marker-4{
+            right: -5400px;
+        }
+        .marker-5{
+            right: -8300px;
+        }
+        .KM{
+            position: absolute;
+            z-index: 7;
+            bottom: -10%;
+            width: 240px;
+            height: 200px;
+            background-image: url('/img/biking/billboard-03.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            h3{
+                font-size: 20px;
+                position: absolute;
+                left: 50%;
+                bottom: 150px;
+                transform: translateX(-50%);
+            }
+        }
+        .km-1{
+            right: -400px;
+        }
+        .km-2{
+            right: -1400px;
+        }
+        .km-3{
+            right: -3400px;
+        }
+        .km-4{
+            right: -5400px;
+        }
+        .km-6{
+            right: -8300px;
+        }
+        &.loaded{
+            display: none;
+        }
+    }
+}
