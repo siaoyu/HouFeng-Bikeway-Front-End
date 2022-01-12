@@ -35,7 +35,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("/img/標題用.png");
+  background-image: url("/img/attraction/標題用.png");
 }
 
 .title h1 {
@@ -180,7 +180,7 @@
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(1) {
-  background-image: url("/img/25-news.ltn.com.tw-Larch-1.jpg");
+  background-image: url("/img/attraction/25-news.ltn.com.tw-Larch-1.jpg");
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(1) .accordion-overlay {
@@ -194,7 +194,7 @@
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(2) {
-  background-image: url("/img/17-travel.taichung.gov.tw-GongLaoPing-3.jpg");
+  background-image: url("/img/attraction/17-travel.taichung.gov.tw-GongLaoPing-3.jpg");
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(2) .accordion-overlay {
@@ -208,7 +208,7 @@
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(3) {
-  background-image: url("/img/30-FB@taichungresort-MiniTrainPatk-3(1).jpg");
+  background-image: url("/img/attraction/30-FB@taichungresort-MiniTrainPatk-3(1).jpg");
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(3) .accordion-overlay {
@@ -222,7 +222,7 @@
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(4) {
-  background-image: url("/img/13-as660707.pixnet.net-200days-1.jpg");
+  background-image: url("/img/attraction/13-as660707.pixnet.net-200days-1.jpg");
 }
 
 .photos .row:nth-child(2) .site-outer .site-inner .accordion-group li:nth-child(4) .accordion-overlay {
@@ -248,20 +248,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/03-sheep17go.com-RongTing-3.JPG");
+  background-image: url("/img/attraction/03-sheep17go.com-RongTing-3.JPG");
 }
 
 .focus .row:nth-child(2) .sp-img:before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -5px;
   left: -10px;
   width: 105%;
   height: 105%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("/img/splatter-3.jpg");
+  background-image: url("/img/attraction/splatter-3.jpg");
   mix-blend-mode: screen;
 }
 
@@ -347,7 +347,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("/img/sp-text-title-1.png");
+  background-image: url("/img/attraction/sp-text-title-1.png");
 }
 
 .focus .row:nth-child(2) .col:nth-child(2) .sp-text h4 {
@@ -356,7 +356,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("/img/sp-text-subtitle-1.png");
+  background-image: url("/img/attraction/sp-text-subtitle-1.png");
 }
 
 .focus .row:nth-child(2) .col:nth-child(2) .sp-text p {
@@ -505,27 +505,27 @@
 
 .themes .row:nth-child(2) .package .couple {
   height: 535px;
-  background-image: url("/img/13-blue74.net-200days-4.jpg");
+  background-image: url("/img/attraction/13-blue74.net-200days-4.jpg");
 }
 
 .themes .row:nth-child(2) .package .family {
   height: 250px;
-  background-image: url("/img/26-ezgo.coa.gov.tw-zh-TW-Front-Agri-Detail-37-5.jpg");
+  background-image: url("/img/attraction/26-ezgo.coa.gov.tw-zh-TW-Front-Agri-Detail-37-5.jpg");
 }
 
 .themes .row:nth-child(2) .package .friend {
   height: 258px;
-  background-image: url("/img/04-FB@paintballyeke-YeKe-1.jpg");
+  background-image: url("/img/attraction/04-FB@paintballyeke-YeKe-1.jpg");
 }
 
 .themes .row:nth-child(2) .package .nature {
   height: 258px;
-  background-image: url("/img/06-www.leeleelin.com-SteelBridge-5.jpg");
+  background-image: url("/img/attraction/06-www.leeleelin.com-SteelBridge-5.jpg");
 }
 
 .themes .row:nth-child(2) .package .history {
   height: 250px;
-  background-image: url("/img/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg");
+  background-image: url("/img/attraction/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg");
 }
 
 .themes .row:nth-child(2) .nothing {
@@ -542,7 +542,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("/img/bike.png");
+  background-image: url("/img/attraction/bike.png");
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }

@@ -23,26 +23,26 @@
     src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
 
-$title-img: '/img/標題用.png';
-$swiper-img-1: '/img/25-news.ltn.com.tw-Larch-1.jpg';
-$swiper-img-2: '/img/17-travel.taichung.gov.tw-GongLaoPing-3.jpg';
-$swiper-img-3: '/img/30-FB@taichungresort-MiniTrainPatk-3\(1\).jpg';
-$swiper-img-4: '/img/13-as660707.pixnet.net-200days-1.jpg';
+$title-img: '/img/attraction/標題用.png';
+$swiper-img-1: '/img/attraction/25-news.ltn.com.tw-Larch-1.jpg';
+$swiper-img-2: '/img/attraction/17-travel.taichung.gov.tw-GongLaoPing-3.jpg';
+$swiper-img-3: '/img/attraction/30-FB@taichungresort-MiniTrainPatk-3\(1\).jpg';
+$swiper-img-4: '/img/attraction/13-as660707.pixnet.net-200days-1.jpg';
 $swiper-img-color-1: #3F4042;
 $swiper-img-color-2: #AEA83E;
 $swiper-img-color-3: #86817C;
 $swiper-img-color-4: #4E5643;
 
-$sp-img: '/img/03-sheep17go.com-RongTing-3.JPG';
-$sp-cover-img: '/img/splatter-3.jpg';
-$sp-text-title-img: '/img/sp-text-title-1.png';
-$sp-text-subtitle-img: '/img/sp-text-subtitle-1.png';
+$sp-img: '/img/attraction/03-sheep17go.com-RongTing-3.JPG';
+$sp-cover-img: '/img/attraction/splatter-3.jpg';
+$sp-text-title-img: '/img/attraction/sp-text-title-1.png';
+$sp-text-subtitle-img: '/img/attraction/sp-text-subtitle-1.png';
 
-$themes-img-1: '/img/13-blue74.net-200days-4.jpg';
-$themes-img-2: '/img/06-www.leeleelin.com-SteelBridge-5.jpg';
-$themes-img-3: '/img/04-FB@paintballyeke-YeKe-1.jpg';
-$themes-img-4: '/img/26-ezgo.coa.gov.tw-zh-TW-Front-Agri-Detail-37-5.jpg';
-$themes-img-5: '/img/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg';
+$themes-img-1: '/img/attraction/13-blue74.net-200days-4.jpg';
+$themes-img-2: '/img/attraction/06-www.leeleelin.com-SteelBridge-5.jpg';
+$themes-img-3: '/img/attraction/04-FB@paintballyeke-YeKe-1.jpg';
+$themes-img-4: '/img/attraction/26-ezgo.coa.gov.tw-zh-TW-Front-Agri-Detail-37-5.jpg';
+$themes-img-5: '/img/attraction/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg';
 
 
 // 標題
@@ -68,7 +68,9 @@ $themes-img-5: '/img/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg';
         height: 2px;
         border-bottom: 2px solid #000000;
     }
+    
 }
+
 
 .subtitle {
     padding-left: 9%;
@@ -249,7 +251,7 @@ $themes-img-5: '/img/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg';
         &:before {
             content: '';
             position: absolute;
-            top: 0;
+            top: -5px;
             left: -10px;
             width: 105%;
             height: 105%;
@@ -501,7 +503,7 @@ $themes-img-5: '/img/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg';
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
-            background-image: url('/img/bike.png');
+            background-image: url('/img/attraction/bike.png');
             transform: rotateY(-180deg);
         }
     }

@@ -2,6 +2,14 @@ $title-img: '/img/store/title.png';
 $swiper-img: 'https://dummyimage.com/275x275';
 $goods-img: 'https://dummyimage.com/300x300';
 
+h1{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
 // swiperjs
 .swiper {
     width: 100%;
@@ -49,6 +57,7 @@ $goods-img: 'https://dummyimage.com/300x300';
     background-repeat: no-repeat;
     background-position: left;
     background-image: url($title-img);
+
 
     h1 {
         padding-left: 24px;
