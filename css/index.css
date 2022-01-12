@@ -23,7 +23,7 @@
           width: 100vw;
         }
 
-        /* 筆刷 */
+        /* 標題logo */
 
         #top {
           width: 100vw;
@@ -32,12 +32,12 @@
         }
 
         .logo {
-          font-size: 5vw;
           position: absolute;
           top: 27.93%;
           left: 9.64%;
           z-index: 1;
           line-height: 0.9;
+          width: 55vw;
         }
 
         .slogan {
@@ -61,9 +61,15 @@
         .banner {
           width: 100vw;
           height: 41vw;
-          background-color: #707070;
+          background-color: #ffffff;
           position: relative;
           clip-path: ellipse(100% 100% at 50% -6%);
+        }
+
+        .banner img{
+          width: 100vw;
+          opacity: 0.6;
+          margin: -400px 0;
         }
 
         .banner-mask {
@@ -148,7 +154,8 @@
           display: none;
           width: 3vw;
           height: 3vw;
-          background-image: url('/img/index/moving-bike.png');
+          background-image: url('/img/index/moving-bike-02.png');
+          transform: rotateY(-180deg);
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
@@ -196,18 +203,25 @@
         }
 
         .gorgeousness-img {
-          background-image: url('/img/index/首頁方框用.png'), url('https://placeholder.pics/svg/800x500');
           background-repeat: no-repeat;
-          background-size: contain, 90%;
+          background-size: contain, 88%;
           background-position: center;
         }
 
-        /* 左圖 */
+        /* 左圖-1 */
 
         .gorgeousness-img.left {
           width: 65%;
           margin-left: 25%;
           margin-right: 1%;
+        }
+        
+        .left-1 {
+          background-image: url('/img/index/首頁方框用.png'), url('/img/index/25-news.ltn.com.tw-Larch-1.jpg');
+        }
+
+        .left-2 {
+          background-image: url('/img/index/首頁方框用.png'), url('/img/index/10-alberthsieh.com-26323-flpo_horse.jpg');
         }
 
         /* 右圖 */
@@ -216,6 +230,14 @@
           width: 65%;
           margin-right: 25%;
           margin-left: 1%;
+        }
+
+        .right-1 {
+          background-image: url('/img/index/首頁方框用.png'), url('/img/index/13-blue74.net-200days-4.jpg');
+        }
+
+        .right-2 {
+          background-image: url('/img/index/首頁方框用.png'), url('/img/index/07-www.tourism.taichung.gov.tw-No9Tunnel-2.jpg');
         }
 
         .gorgeousness-text {
@@ -255,6 +277,7 @@
           color: #3F4042;
         }
 
+        /* 側邊進度條 */
         .anchor-point {
           display: flex;
           position: absolute;
@@ -265,11 +288,11 @@
 
         a {
           text-decoration: none;
-          color: #AFAFAF;
+          color: #AEA83E;
         }
 
         a:hover {
-          color: #000000;
+          color: #AEA83E;
         }
 
 
@@ -283,7 +306,7 @@
           justify-content: space-between;
           text-align: center;
           margin-top: -0.325vw;
-          color: #AFAFAF;
+          color: #AEA83E;
         }
 
         .anchor-point-title {
@@ -307,7 +330,7 @@
         .anchor-point-line {
           width: 1px;
           height: 3.125vw;
-          background-color: #AFAFAF;
+          background-color: #AEA83E;
         }
 
         .mountain {
@@ -468,7 +491,7 @@
           margin-left: 29vw;
           margin-top: 9vw;
           display: flex;
-          color: #AEA83E;
+          color: #ffffff;
         }
 
         .footer-menu {
