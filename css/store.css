@@ -60,7 +60,8 @@
 }
 
 .maps {
-  background-color: #4e5643;
+  background-color: rgba(78, 86, 67, 0.7);
+  margin: 300px 0px;
 }
 
 .maps .container {
@@ -126,6 +127,10 @@
   right: 20px;
   opacity: 0;
   z-index: 1;
+}
+
+.omiyage .row:nth-child(2) .col figure.goods h1 {
+  font-size: 2rem;
 }
 
 .omiyage .row:nth-child(2) .col figure.goods h2, .omiyage .row:nth-child(2) .col figure.goods h4 {
