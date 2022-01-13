@@ -26,7 +26,7 @@ function skip(){
     loadCircle.classList.remove('none');
     loadingVeiw.classList.add('none');
     mainVeiw.classList.remove('loaded');
-    main.style.minHeight = '10000px';
+    main.style.minHeight = '11000px';
 }
 //有需要修改就打開
 skip();
