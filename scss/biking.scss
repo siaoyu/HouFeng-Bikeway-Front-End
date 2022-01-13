@@ -76,7 +76,7 @@ main{
     .skip-btn{
         position: fixed;
         top: 50vh;
-        right: 2vw;
+        right: 100px;
         transform: translateY(-50%);
         display: flex;
         justify-content: center;
@@ -85,7 +85,7 @@ main{
         height: 80px;
         color: #fff;
         font-size: 30px;
-        border: 4px #fff solid;
+        border: 4px rgb(36, 35, 35) solid;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -374,7 +374,7 @@ main{
                         height: 0px;
                         color: transparent;
                         border-radius: 50%;
-                        transform: rotate(calc(130deg * var(--i)));
+                        transform: rotate(90deg);
                         transition: .5s;
                     }
                     .toggle {

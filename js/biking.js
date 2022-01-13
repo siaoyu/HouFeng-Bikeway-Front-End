@@ -29,7 +29,7 @@ function skip(){
     main.style.minHeight = '10000px';
 }
 //有需要修改就打開
-// skip();
+skip();
 
 
 
@@ -49,16 +49,16 @@ mainVeiw.innerHTML =`
         <div class="toggle"></div>
         <!-- 調整li裡面的--i可以選擇位置 -->
         <li style="--i:3;">
-            <a href="#"><ion-icon name="map-outline"></ion-icon></a>
+            <a href="#景點"><ion-icon name="map-outline"></ion-icon></a>
         </li>
         <li style="--i:4;">
-            <a href="#"><ion-icon name="fast-food-outline"></ion-icon></a>
+            <a href="#揪騎"><ion-icon name="bicycle"></ion-icon></a>
         </li>
         <li style="--i:5;">
-            <a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a>
+            <a href="#店家"><ion-icon name="bag-handle-outline"></ion-icon></a>
         </li>
         <li style="--i:6;">
-            <a href="#"><ion-icon name="reader-outline"></ion-icon></a>
+            <a href="#首頁"><ion-icon name="reader-outline"></ion-icon></a>
         </li>
     </div>
     <div class="space">
