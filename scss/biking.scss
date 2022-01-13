@@ -105,6 +105,7 @@ main{
         //捲動提示
         .scroll-tip{
             position: absolute;
+            z-index: 12;
             top: 40%;
             left: 10%;
             width: 400px;
@@ -325,6 +326,7 @@ main{
                 transform: perspective(500px) rotateX(-25deg);
             }
         }
+        //漂浮浮標
         .camera {
             position: absolute;
             z-index: 10;
