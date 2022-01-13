@@ -341,6 +341,16 @@ body .container .content .signup-cont {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.white-background {
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  height: 25vw;
+  top: 186%;
+  left: 0;
+  z-index: -5;
+}
+
 #bottom {
   width: 100vw;
   height: 70.492vw;
