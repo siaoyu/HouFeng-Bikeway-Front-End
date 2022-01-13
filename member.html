@@ -9,197 +9,309 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/member.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/member.css">
+
+    <style>
+        .white-background {
+            position: absolute;
+            background-color: white;
+            width: 100vw;
+            height: 25vw;
+            top: 186%;
+            left: 0;
+            z-index: -5;
+        }
+    </style>
+
+
 </head>
 
 <body>
-    <section id="top">
-        <div class="title">揪成會員________________</div>
-        <embed class="title-mask" src="/img/banner點綴.svg" type="">
-        <div class="slogan">騎車才不會錯過美麗的風景。</div>
-        <div class="banner"></div>
-        <embed class="banner-mask" src="img/banner-mask.svg" type="">
-        <div class="banner-photo">
-  
-        </div>
-      </section>
-      
-    <section id="bottom">
-        <div class="container">
-            <div class="row main active" id="main">
-                <section class="login">
-                    <article class="half">
-                        <h1>Azure</h1>
-                        <div class="tabs">
-                            <span class="tab signin active"><a href="#signin">Sign in</a></span>
-                            <span class="tab signup"><a href="#signup">Sign up</a></span>
-                        </div>
-                        <div class="content">
-                            <div class="signin-cont cont">
-                                <form action="#" method="post" enctype="multipart/form-data">
-                                    <input type="email" name="email" id="email" class="inpt" required="required"
-                                        placeholder="Your email">
-                                    <label for="email">Your email</label>
-                                    <input type="password" name="password" id="password" class="inpt"
-                                        required="required" placeholder="Your password">
-                                    <label for="password">Your password</label>
-                                    <input type="checkbox" id="remember" class="checkbox" checked>
-                                    <label for="remember">Remember me</label>
-                                    <div class="submit-wrap">
-                                        <input type="submit" value="Sign in" class="submit">
-                                        <a href="#" class="more">Forgot your password?</a>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="signup-cont cont">
-                                <form action="#" method="post" enctype="multipart/form-data">
-                                    <input type="name" name="name" id="name" class="inpt" required="required"
-                                        placeholder="Your name">
-                                    <label for="name">Your name</label>
-                                    <input type="email" name="email" id="email" class="inpt" required="required"
-                                        placeholder="Your email">
-                                    <label for="email">Your email</label>
-                                    <input type="password" name="password" id="password" class="inpt"
-                                        required="required" placeholder="Your password">
-                                    <label for="password">Your password</label>
-                                    <div class="submit-wrap">
-                                        <input type="submit" value="Sign up" class="submit">
-                                        <a href="#" class="more">Terms and conditions</a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </article>
+    <main>
+        <nav>
+            <ul class="navbar">
+                <li class="navbar-title">消息
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">消息</div>
+                        <a href="#">
+                            <span>鄰近活動</span>
+                        </a>
+                        <a href="">
+                            <span>施工消息</span>
+                        </a>
+                        <a href="">
+                            <span>租車優惠</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-title">景點
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">景點</div>
+                        <a href="">
+                            <span>網美拍照</span>
+                        </a>
+                        <a href="">
+                            <span>特別推薦</span>
+                        </a>
+                        <a href="">
+                            <span>套裝行程</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-title">商家
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">商家</div>
+                        <a href="">
+                            <span>美食饗宴</span>
+                        </a>
+                        <a href="">
+                            <span>騎上鐵馬</span>
+                        </a>
+                        <a href="">
+                            <span>帶伴手禮</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-title">揪團
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">揪團</div>
+                        <a href="">
+                            <span>在線行程</span>
+                        </a>
+                        <a href="">
+                            <span>照片牆</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-title">服務
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">服務</div>
+                        <a href="">
+                            <span>基本資訊</span>
+                        </a>
+                        <a href="">
+                            <span>交通資訊</span>
+                        </a>
+                        <a href="">
+                            <span>聯絡我們</span>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-title">登入
+                    <div class="nav-detail">
+                        <div class="nav-detail-title">登入</div>
+                        <a href="">
+                            <span>成為會員</span>
+                        </a>
+                        <a href="">
+                            <span>我的行程</span>
+                        </a>
+                    </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section id="top">
+            <div class="title">揪成會員________________</div>
+            <embed class="title-mask" src="/img/member/banner點綴.svg" type="">
+            <div class="slogan">騎車才不會錯過美麗的風景。</div>
+            <div class="banner"></div>
+            <embed class="banner-mask" src="img/member/banner-mask.svg" type="">
+            <div class="banner-photo">
             </div>
 
-        </div>
-        <div class="self-trip">
-            <div class="title">自訂行程_____________</div>
-            <embed class="title-mask" src="./img/member/標題用.png" type="">
-            <div class="subtitle">我是文字</div>
+            <!-- 背景有一段空白處 用白色去填 -->
+            <div class="white-background"></div>
+        </section>
+        <section id="bottom">
+            <!-- 登入表單 要看的話把 style="display: none;" 移至下面自訂行程 -->
+            <div class="container">
+                <div class="row main active" id="main">
+                    <section class="login">
+                        <article class="half">
+                            <h1>Azure</h1>
+                            <div class="tabs">
+                                <span class="tab signin active"><a href="#signin">Sign in</a></span>
+                                <span class="tab signup"><a href="#signup">Sign up</a></span>
+                            </div>
+                            <div class="content">
+                                <div class="signin-cont cont">
+                                    <form action="#" method="post" enctype="multipart/form-data">
+                                        <input type="email" name="email" id="email" class="inpt" required="required"
+                                            placeholder="Your email">
+                                        <label for="email">Your email</label>
+                                        <input type="password" name="password" id="password" class="inpt"
+                                            required="required" placeholder="Your password">
+                                        <label for="password">Your password</label>
+                                        <input type="checkbox" id="remember" class="checkbox" checked>
+                                        <label for="remember">Remember me</label>
+                                        <div class="submit-wrap">
+                                            <input type="submit" value="Sign in" class="submit">
+                                            <a href="#" class="more">Forgot your password?</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="signup-cont cont">
+                                    <form action="#" method="post" enctype="multipart/form-data">
+                                        <input type="name" name="name" id="name" class="inpt" required="required"
+                                            placeholder="Your name">
+                                        <label for="name">Your name</label>
+                                        <input type="email" name="email" id="email" class="inpt" required="required"
+                                            placeholder="Your email">
+                                        <label for="email">Your email</label>
+                                        <input type="password" name="password" id="password" class="inpt"
+                                            required="required" placeholder="Your password">
+                                        <label for="password">Your password</label>
+                                        <div class="submit-wrap">
+                                            <input type="submit" value="Sign up" class="submit">
+                                            <a href="#" class="more">Terms and conditions</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </article>
+                </div>
 
-            <div class="trip-navbar">
-                <div class="trip-nav"></div>
-                <div class="trip-nav"></div>
-                <div class="trip-nav"></div>
-                <div class="trip-nav"></div>
-                <div class="trip-nav"></div>
             </div>
-            <div class="nav-title">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-            </div>
-            <div id="carousel" class="trip-carousel">
-                <div class="carousel-mask"></div>
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content">內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-image"></div>
-                            <div class="swiper-title">Title</div>
-                            <div class="swiper-content"></div>
+
+
+            <!-- 自訂行程  要看的話把 style="display: none;" 移至登入表單-->
+
+            <div class="self-trip" style="display: none;">
+                <div class="title">自訂行程_____________</div>
+                <embed class="title-mask" src="/img/member/標題用.svg" type="">
+                <div class="subtitle">我是文字</div>
+
+                <div class="trip-navbar">
+                    <div class="trip-nav"></div>
+                    <div class="trip-nav"></div>
+                    <div class="trip-nav"></div>
+                    <div class="trip-nav"></div>
+                    <div class="trip-nav"></div>
+                </div>
+                <div class="nav-title">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <div id="carousel" class="trip-carousel">
+                    <div class="carousel-mask"></div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content">內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image"></div>
+                                <div class="swiper-title">Title</div>
+                                <div class="swiper-content"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
+
+
+
+
+        <footer>
+            <embed class="footer-mask" src="/img/member/footer用-總和.png" type="">
+            <div class="footer-curve"></div>
+            <div class="footer-container">
+                <div class="footer-menu">
+                    <div class="footer-menu-title">最新消息</div>
+                    <div class="footer-menu-item">最近活動</div>
+                    <div class="footer-menu-item">施工消息</div>
+                    <div class="footer-menu-item">租車優惠</div>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title">景點介紹</div>
+                    <div class="footer-menu-item">朋友聚會</div>
+                    <div class="footer-menu-item">情侶約會</div>
+                    <div class="footer-menu-item">親子同樂</div>
+                    <div class="footer-menu-item">歷史巡禮</div>
+                    <div class="footer-menu-item">自然景觀</div>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title">附近店家</div>
+                    <div class="footer-menu-item">美食饗宴</div>
+                    <div class="footer-menu-item">伴手禮</div>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title">揪團</div>
+                    <div class="footer-menu-item">照片牆</div>
+                    <div class="footer-menu-item">揪團群</div>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title">會員系統</div>
+                    <div class="footer-menu-item">申請會員</div>
+                    <div class="footer-menu-item">管理</div>
+                </div>
+                <div class="footer-menu">
+                    <div class="footer-menu-title">服務中心</div>
+                    <div class="footer-menu-item">交通資訊</div>
+                    <div class="footer-menu-item">聯絡我們</div>
+                </div>
+
+                <div class="footer-news"></div>
+
+            </div>
+
+
+        </footer>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/navbar.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        //頁籤
-        var topElements = document.querySelectorAll('.top');
-        var mainElements = document.querySelectorAll('.main');
-        for (let i = 0; i < topElements.length; i++) {
-            topElements[i].addEventListener('click', function () {
-                for (let j = 0; j < topElements.length; j++) {
 
-                    topElements[j].classList.remove('active');
-                    mainElements[j].classList.remove('active');
-                }
-                topElements[i].classList.add('active');
-                mainElements[i].classList.add('active');
-            });
-        }
-
-        // 登入
-        $('.tabs .tab').click(function () {
-            if ($(this).hasClass('signin')) {
-                $('.tabs .tab').removeClass('active');
-                $(this).addClass('active');
-                $('.cont').hide();
-                $('.signin-cont').show();
-            }
-            if ($(this).hasClass('signup')) {
-                $('.tabs .tab').removeClass('active');
-                $(this).addClass('active');
-                $('.cont').hide();
-                $('.signup-cont').show();
-            }
-        });
-        $('.container .bg').mousemove(function (e) {
-            var amountMovedX = (e.pageX * -1 / 30);
-            var amountMovedY = (e.pageY * -1 / 9);
-            $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-        });
-    </script>
+    <script src="/js/member.js"></script>
 
 
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".swiper", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
 
 </body>
 
