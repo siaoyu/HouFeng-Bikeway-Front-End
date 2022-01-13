@@ -29,13 +29,25 @@ body {
 
 #middle {
   width: 100vw;
-  height: 36.458vw;
+  height: 46.458vw;
   position: relative;
-  background-image: url(/img/service/06-travel.taichung.gov.tw-SteelBridge-3.jpg);
 
-  background-color: white;
 
 }
+
+.middle-background {
+  background-image: url(/img/service/06-travel.taichung.gov.tw-SteelBridge-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46.458vw;
+  width: 100vw;
+  z-index: -1;
+}
+
 
 #middle .title {
   position: absolute;
@@ -45,11 +57,11 @@ body {
 }
 
 .title:after {
-    content: '';
-    width: calc( 438px / 2);
-    height: 2px;
-    border-bottom: 2px solid #000000;
-  }
+  content: '';
+  width: calc(438px / 2);
+  height: 2px;
+  border-bottom: 2px solid #000000;
+}
 
 #middle .subtitle {
   position: absolute;
@@ -77,6 +89,7 @@ body {
   position: absolute;
   top: 12.917vw;
   left: 18.4375vw;
+  background-color: rgba(227, 225, 176, 0.8);
 }
 
 
@@ -84,7 +97,8 @@ body {
 #bottom {
   width: 100vw;
   height: 130.1vw;
-  position: relative;
+  position: absolute;
+  top: 84%;
 
 }
 
