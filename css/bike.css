@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -423,115 +427,11 @@ main .veiw .scroll-tip .mouse:after {
   }
 }
 
-@-webkit-keyframes nudgeText {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  30% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  60% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  80% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes nudgeText {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  20% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  30% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  60% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  80% {
-    -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
-  }
-  90% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes colorText {
-  21% {
-    color: #4e5559;
-  }
-  30% {
-    color: #ffffff;
-  }
-  51% {
-    color: #4e5559;
-  }
-  60% {
-    color: #ffffff;
-  }
-  81% {
-    color: #4e5559;
-  }
-  90% {
-    color: #ffffff;
-  }
-}
-
-@keyframes colorText {
-  21% {
-    color: #4e5559;
-  }
-  30% {
-    color: #ffffff;
-  }
-  51% {
-    color: #4e5559;
-  }
-  60% {
-    color: #ffffff;
-  }
-  81% {
-    color: #4e5559;
-  }
-  90% {
-    color: #ffffff;
-  }
-}
-
 main .veiw .scroll-tip h3 {
   position: absolute;
-  bottom: 10%;
-  left: 130px;
-  color: #ccc;
+  bottom: 4%;
+  left: 150px;
+  color: #fff;
   font-size: 35px;
   font-weight: 900;
 }
@@ -541,7 +441,7 @@ main .veiw .background {
   left: 0;
   bottom: 50px;
   z-index: -10;
-  width: 10800px;
+  width: 12000px;
   height: 900px;
   background-image: url("/img/biking/bg-2.png");
   background-size: contain;
@@ -978,26 +878,26 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-4800px);
-          transform: translateX(-4800px);
+  -webkit-transform: translateX(-4000px);
+          transform: translateX(-4000px);
 }
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-14400px);
-          transform: translateX(-14400px);
+  -webkit-transform: translateX(-1600px);
+          transform: translateX(-1600px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-4800px);
-          transform: translateX(-4800px);
+  -webkit-transform: translateX(-12000px);
+          transform: translateX(-12000px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-22400px);
+          transform: translateX(-22400px);
 }
 
 main .veiw .tree.tree-5 {
@@ -1008,26 +908,26 @@ main .veiw .tree.tree-5 {
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-33600px);
-          transform: translateX(-33600px);
+  -webkit-transform: translateX(-19200px);
+          transform: translateX(-19200px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-22400px);
-          transform: translateX(-22400px);
+  -webkit-transform: translateX(-11200px);
+          transform: translateX(-11200px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-51200px);
-          transform: translateX(-51200px);
+  -webkit-transform: translateX(-12800px);
+          transform: translateX(-12800px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-36000px);
-          transform: translateX(-36000px);
+  -webkit-transform: translateX(-64800px);
+          transform: translateX(-64800px);
 }
 
 main .veiw .grass {

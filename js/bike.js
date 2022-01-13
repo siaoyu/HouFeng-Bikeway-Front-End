@@ -4,6 +4,7 @@ let loadingVeiw = document.querySelector('.loading-veiw');
 let loadCircle = document.querySelector('.loader');
 let mainVeiw = document.querySelector('.veiw');
 let btnElements = document.querySelectorAll('button');
+let skipBtn = document.querySelector('.skip-btn');
 //籌備告示
 function notYet(){
     alert('籌備中，敬請期待!!')
@@ -19,7 +20,7 @@ function start(){
         loadingVeiw.classList.add('none');
         mainVeiw.classList.remove('loaded');
     }, 3000);
-    main.style.minHeight = '10000px';
+    main.style.minHeight = '11000px';
 }
 ///省略動畫用
 function skip(){
@@ -29,7 +30,7 @@ function skip(){
     main.style.minHeight = '11000px';
 }
 //有需要修改就打開
-skip();
+// skip();
 
 
 
@@ -115,7 +116,7 @@ mainVeiw.innerHTML =`
     <div class="info-title"></div>
     <p class="info-description"></p>
 </div>
-<div class="KM km-1">
+<div id="p1" class="KM km-1">
     <h3 class="km-number">0.55K</h3>
 </div>
 <div class="KM km-2">
@@ -286,4 +287,6 @@ window.addEventListener('scroll', function () {
         deleteText();
     }
 
+
+   
 })
