@@ -65,6 +65,7 @@ main .veiw {
 
 main .veiw .scroll-tip {
   position: absolute;
+  z-index: 12;
   top: 40%;
   left: 10%;
   width: 400px;
@@ -977,8 +978,8 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-800px);
-          transform: translateX(-800px);
+  -webkit-transform: translateX(-4800px);
+          transform: translateX(-4800px);
 }
 
 main .veiw .tree.tree-2 {
@@ -989,44 +990,44 @@ main .veiw .tree.tree-2 {
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-12000px);
+          transform: translateX(-12000px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-16000px);
-          transform: translateX(-16000px);
+  -webkit-transform: translateX(-22400px);
+          transform: translateX(-22400px);
 }
 
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-20000px);
-          transform: translateX(-20000px);
+  -webkit-transform: translateX(-12000px);
+          transform: translateX(-12000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-4800px);
+          transform: translateX(-4800px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-44800px);
-          transform: translateX(-44800px);
+  -webkit-transform: translateX(-39200px);
+          transform: translateX(-39200px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-44800px);
-          transform: translateX(-44800px);
+  -webkit-transform: translateX(-57600px);
+          transform: translateX(-57600px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-64800px);
-          transform: translateX(-64800px);
+  -webkit-transform: translateX(-21600px);
+          transform: translateX(-21600px);
 }
 
 main .veiw .grass {
