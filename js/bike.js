@@ -26,7 +26,7 @@ function skip(){
     loadCircle.classList.remove('none');
     loadingVeiw.classList.add('none');
     mainVeiw.classList.remove('loaded');
-    main.style.minHeight = '10000px';
+    main.style.minHeight = '11000px';
 }
 //有需要修改就打開
 skip();
@@ -36,7 +36,7 @@ skip();
 mainVeiw.innerHTML =`
 <div class="scroll-tip">
     <div class="mouse"></div>
-    <h3>清滾動滑鼠滾輪</h3>
+    <h3>請滾動滑鼠滾輪</h3>
 </div>
 <div class="background"></div>
 <div id="road" class="road">
