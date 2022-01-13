@@ -884,50 +884,50 @@ main .veiw .tree.tree-1 {
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-11200px);
-          transform: translateX(-11200px);
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-16800px);
-          transform: translateX(-16800px);
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-9600px);
+          transform: translateX(-9600px);
 }
 
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-8000px);
-          transform: translateX(-8000px);
+  -webkit-transform: translateX(-28000px);
+          transform: translateX(-28000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-33600px);
-          transform: translateX(-33600px);
+  -webkit-transform: translateX(-19200px);
+          transform: translateX(-19200px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-11200px);
-          transform: translateX(-11200px);
+  -webkit-transform: translateX(-44800px);
+          transform: translateX(-44800px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-12800px);
-          transform: translateX(-12800px);
+  -webkit-transform: translateX(-51200px);
+          transform: translateX(-51200px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-7200px);
-          transform: translateX(-7200px);
+  -webkit-transform: translateX(-21600px);
+          transform: translateX(-21600px);
 }
 
 main .veiw .grass {
@@ -1105,14 +1105,15 @@ main .veiw .marker {
   position: absolute;
   z-index: 8;
   top: 20%;
-  width: 80px;
-  height: 108px;
+  width: 60px;
+  height: 90px;
   background-image: url("/img/biking/地標-01.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 main .veiw .marker-1 {
+  top: 300px;
   right: -400px;
 }
 
@@ -1180,6 +1181,7 @@ main .veiw .KM h3 {
   position: absolute;
   left: 50%;
   bottom: 150px;
+  color: #fff;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
