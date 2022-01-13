@@ -36,7 +36,7 @@ skip();
 mainVeiw.innerHTML =`
 <div class="scroll-tip">
     <div class="mouse"></div>
-    <h3>清滾動滑鼠滾輪</h3>
+    <h3>請滾動滑鼠滾輪</h3>
 </div>
 <div class="background"></div>
 <div id="road" class="road">
