@@ -19,7 +19,7 @@ function start(){
     setTimeout(function () {
         loadingVeiw.classList.add('none');
         mainVeiw.classList.remove('loaded');
-    }, 3000);
+    }, 700);
     main.style.minHeight = '11000px';
 }
 ///省略動畫用
@@ -114,7 +114,7 @@ mainVeiw.innerHTML =`
 
 <div class="info">
     <div class="info-title"></div>
-    <p class="info-description"></p>
+    <div class="info-description"></div>
 </div>
 <div id="p1" class="KM km-1">
     <h3 class="km-number">0.55K</h3>
@@ -182,6 +182,19 @@ let kmShowers = document.querySelectorAll('.KM');
 let kmNumber = document.querySelector('.km-number');
 
 
+//跳起來
+// window.addEventListener('keydown', function(e){
+    
+//     if(e.code == 'KeyW' ){
+        
+//         bikeElement.classList.add('jump');
+        
+//         setTimeout(function () {
+//             bikeElement.classList.remove('jump');
+//         }, 500);
+//     }
+// });
+
 //橫向捲軸
 window.addEventListener('scroll', function () {
     let yValue = window.scrollY;
@@ -189,6 +202,12 @@ window.addEventListener('scroll', function () {
     scrollTip.style.transform = `translateY(${yValue * 1}px)`;
     scrollTip.style.opacity = 1 -(yValue * 0.005);
     
+    //腳踏車
+    setTimeout(function () {
+        bikeElement.style.animation =`animateBiking 1s steps(8)  running`;
+    }, 100);
+    
+    bikeElement.style.animation='';
     //背景
     backgroundElement.style.transform = `translateX(${-yValue}px)`;
     //馬路中線

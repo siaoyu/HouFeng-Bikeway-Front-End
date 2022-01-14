@@ -73,7 +73,7 @@ main{
     justify-content: center;
     align-items: center;
     min-height: 100vh;//頁面長度
-    // background: linear-gradient(0deg,rgb(58, 49, 90), #facd6d, #cfe6f9);
+    
     //快速前進按鈕
     .skip-btn{
         position: fixed;
@@ -260,6 +260,7 @@ main{
                 font-weight: 900;
             }
         }
+        //背景
         .background{
             position: absolute;
             left: 0;
@@ -271,6 +272,7 @@ main{
             background-size: contain  ;
             background-repeat: repeat-x;
         }
+        //路面
         .road {
             position: absolute;
             width: 120%;
@@ -399,7 +401,6 @@ main{
                 display: flex;
             }
         }
-        
         .space {
             position: relative;
             width: 100%;
@@ -543,7 +544,10 @@ main{
             background-image: url("/img/biking/腳踏車V5.png");
             transform: perspective(800px)  translate(0px,-60px);
             -webkit-box-reflect: below 1px linear-gradient(transparent 90%,#0004);
-            animation: animateBiking 3s steps(8) infinite;
+            animation: animateBiking 1s steps(8) infinite  paused;
+            &.jump{
+                animation: animateJump 0.5s ease-out   ;
+            }
         }
         @keyframes animateBiking {
             from{
@@ -553,6 +557,24 @@ main{
                 background-position: -2240px;
             }
         }
+        @keyframes animateJump {
+            0%{
+                transform: rotate(-15deg) translateY(-60px);
+            }
+            25%{
+                transform: rotate(-45deg) translateY(-100px);
+            }
+            50%{
+                transform:translateY(-200px);
+            }
+            75%{
+                transform: rotate(15deg) translateY(-100px);
+            }
+            100%{
+                transform: rotate(0deg) translateY(-60px);
+            }
+        }
+
         .cloud {
             position: absolute;
             z-index: -1;
