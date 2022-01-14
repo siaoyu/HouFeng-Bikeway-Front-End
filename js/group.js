@@ -24,6 +24,7 @@ titles.forEach((title, index) => {
   })
 });
 
+
 function active(index) {
   teams.classList.add('inactive');
   teamForm.classList.add('inactive');
