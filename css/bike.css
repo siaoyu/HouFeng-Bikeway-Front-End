@@ -891,6 +891,8 @@ main .veiw .tree-2 {
 main .veiw .tree-3 {
   height: 350px;
   background-image: url("/img/biking/treeQ-04.png");
+  bottom: 5%;
+  z-index: 5;
 }
 
 main .veiw .tree-4 {
@@ -903,6 +905,8 @@ main .veiw .tree-5 {
   height: 330px;
   width: 250px;
   background-image: url("/img/biking/treeQ-06.png");
+  bottom: 5%;
+  z-index: 5;
 }
 
 main .veiw .tree-6 {
@@ -929,56 +933,56 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-7200px);
-          transform: translateX(-7200px);
+  -webkit-transform: translateX(-6400px);
+          transform: translateX(-6400px);
 }
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-9600px);
-          transform: translateX(-9600px);
+  -webkit-transform: translateX(-3200px);
+          transform: translateX(-3200px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-12000px);
-          transform: translateX(-12000px);
+  -webkit-transform: translateX(-4800px);
+          transform: translateX(-4800px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-9600px);
+          transform: translateX(-9600px);
 }
 
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-12000px);
-          transform: translateX(-12000px);
+  -webkit-transform: translateX(-32000px);
+          transform: translateX(-32000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-14400px);
-          transform: translateX(-14400px);
+  -webkit-transform: translateX(-9600px);
+          transform: translateX(-9600px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-11200px);
-          transform: translateX(-11200px);
+  -webkit-transform: translateX(-33600px);
+          transform: translateX(-33600px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-6400px);
+          transform: translateX(-6400px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-43200px);
-          transform: translateX(-43200px);
+  -webkit-transform: translateX(-50400px);
+          transform: translateX(-50400px);
 }
 
 main .veiw .grass {
@@ -1057,7 +1061,7 @@ main .veiw .none {
   display: none;
 }
 
-main .veiw .mountain {
+main .veiw .streetLight {
   position: absolute;
   z-index: -2;
   width: 700px;
@@ -1067,14 +1071,28 @@ main .veiw .mountain {
   background-size: contain;
 }
 
-main .veiw .mountain-1 {
+main .veiw .streetLight-1 {
   background-image: url("/img/biking/street-01.png");
   right: -1500px;
 }
 
-main .veiw .mountain-2 {
+main .veiw .streetLight-2 {
   background-image: url("/img/biking/street-02.png");
   right: -4800px;
+}
+
+main .veiw .streetLight-3 {
+  background-image: url("/img/biking/street-01.png");
+  z-index: 5;
+  right: -1300px;
+  bottom: 0;
+}
+
+main .veiw .streetLight-4 {
+  background-image: url("/img/biking/street-02.png");
+  z-index: 5;
+  right: -4500px;
+  bottom: 0;
 }
 
 main .veiw .brige {
@@ -1110,6 +1128,40 @@ main .veiw .info .info-description {
   color: transparent;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+main .veiw .info .info-description .index-link {
+  position: relative;
+  height: 80px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2.3em;
+  font-weight: 900;
+  color: #000;
+  text-shadow: 0 10px 10px rgba(0, 0, 0, 0.438);
+  -webkit-box-shadow: 10px 0 0 #000;
+          box-shadow: 10px 0 0 #000;
+  overflow: hidden;
+  -webkit-animation: textAnimate 5s steps(4) infinite;
+          animation: textAnimate 5s steps(4) infinite;
+}
+
+@-webkit-keyframes textAnimate {
+  0%, 90%, 100% {
+    width: 0;
+  }
+  30%, 60% {
+    width: 230.18px;
+  }
+}
+
+@keyframes textAnimate {
+  0%, 90%, 100% {
+    width: 0;
+  }
+  30%, 60% {
+    width: 230.18px;
+  }
 }
 
 main .veiw .info.open {

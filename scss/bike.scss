@@ -625,6 +625,8 @@ main{
         .tree-3{
             height: 350px;
             background-image: url('/img/biking/treeQ-04.png');
+            bottom: 5%;
+            z-index: 5;
         }
         .tree-4{
             height: 600px;
@@ -635,6 +637,8 @@ main{
             height: 330px;
             width: 250px;
             background-image: url('/img/biking/treeQ-06.png');
+            bottom: 5%;
+            z-index: 5;
         }
         .tree-6{
             height: 400px;
@@ -718,7 +722,7 @@ main{
         .none{
             display: none;
         }
-        .mountain {
+        .streetLight {
             position: absolute;
             z-index: -2;
             width: 700px;
@@ -727,13 +731,25 @@ main{
             background-repeat: no-repeat;
             background-size: contain;
         }
-        .mountain-1{
+        .streetLight-1{
             background-image: url("/img/biking/street-01.png");
             right: -1500px;
         }
-        .mountain-2{
+        .streetLight-2{
             background-image: url("/img/biking/street-02.png");
             right: -4800px;
+        }
+        .streetLight-3{
+            background-image: url("/img/biking/street-01.png");
+            z-index: 5;
+            right: -1300px;
+            bottom: 0;
+        }
+        .streetLight-4{
+            background-image: url("/img/biking/street-02.png");
+            z-index: 5;
+            right: -4500px;
+            bottom: 0;
         }
         .brige{
             position: absolute;
@@ -763,6 +779,27 @@ main{
                 font-size: 1.5rem;
                 color: transparent;
                 transition: 1s;
+                .index-link{
+                    position: relative;
+                    height: 80px;
+                    display: inline-block;
+                    text-decoration: none;
+                    font-size: 2.3em;
+                    font-weight: 900;
+                    color: #000;
+                    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.438);
+                    box-shadow: 10px 0 0 #000;
+                    overflow: hidden;
+                    animation: textAnimate 5s steps(4) infinite;
+                    @keyframes textAnimate {
+                        0%,90%,100%{
+                            width: 0;
+                        }
+                        30%,60%{
+                            width: 230.18px;
+                        }
+                    }
+                }
             }
             &.open{
                 display: flex;

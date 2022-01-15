@@ -91,8 +91,10 @@ mainVeiw.innerHTML =`
 <div class="tree tree-7"></div>
 <div class="tree tree-8"></div>
 <div class="tree tree-9"></div>
-<div class="mountain mountain-1"></div>
-<div class="mountain mountain-2"></div>
+<div class="streetLight streetLight-1"></div>
+<div class="streetLight streetLight-2"></div>
+<div class="streetLight streetLight-3"></div>
+<div class="streetLight streetLight-4"></div>
 <div class="grass grass-1 g-left"></div>
 <div class="grass grass-2 g-left"></div>
 <div class="grass grass-3 g-right"></div>
@@ -165,7 +167,7 @@ const grassElemets1 = document.querySelectorAll('.g-left');
 const grassElemets2 = document.querySelectorAll('.g-right');
 const grassElemets3 = document.querySelectorAll('.g-center');
 //山
-const mountainElemets = document.querySelectorAll('.mountain');
+const mountainElemets = document.querySelectorAll('.streetLight');
 //橋
 const brigeElement = document.querySelector('.brige');
 //景點地標
@@ -252,12 +254,7 @@ window.addEventListener('scroll', function () {
     })
 
 
-    //點擊出現
-    // infoElemet.classList.remove('open')
-    // mapPoint.onclick = function(){
-    //     infoElemet.classList.toggle('open')
-    //     arttactionName.classList.toggle('none')
-    // }
+    
     function deleteText(){
         attractionName.textContent = '';
         attractionDescription.textContent ='';
@@ -270,8 +267,12 @@ window.addEventListener('scroll', function () {
         '在九號隧道北口左迴轉，來到大樟樹休憩廣場。樟樹與榕樹天生於此，二棵不同種的樹木相生相息，枝幹交錯攀爬二樹幹，相依偎形同夫妻故稱夫妻樹。',
         '后里馬場為國內具歷史及規模的公營馬場，為日治時期臺灣總督府，臺灣光復後作為種馬繁殖及國防騎兵之訓練場所。隨著時代轉變，已轉型為具觀光休閒遊憩的馬場。',
     ];
-
+    console.log(kNum);
     if (kNum > 5) {
+        infoElemet.classList.add('open')
+        attractionName.textContent = '揪騎后豐';
+        attractionDescription.innerHTML = `<a class="index-link" href="/index.html">前往首頁</a>`;
+    } else if (kNum > 4.8) {
         deleteText();
     } else if (kNum > 4.3) {
         infoElemet.classList.add('open')
