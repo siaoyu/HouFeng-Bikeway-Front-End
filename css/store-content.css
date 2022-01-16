@@ -9,12 +9,13 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  background-image: url("/img/標題用.png");
+  background-image: url("/img/store-content/標題用.png");
 }
 
 .title h1 {
   padding-left: 24px;
   padding-top: 32px;
+  font-size: 2rem;
 }
 
 .title:after {
@@ -26,6 +27,16 @@
 
 .subtitle {
   padding-left: 9%;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.news-content-p {
+  font-size: 1rem;
+  line-height: 30px;
 }
 
 .store .row:nth-child(2) .store-img {
@@ -94,6 +105,7 @@
 
 .maps {
   background-color: #4e5643;
+  margin: 100px 0px;
 }
 
 .maps .container {
