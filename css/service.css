@@ -39,8 +39,6 @@ body {
   width: 100vw;
   height: 46.458vw;
   position: relative;
-
-
 }
 
 .middle-background {
@@ -103,13 +101,16 @@ body {
   border-radius: 20px;
 }
 
-#middle .bike{
+#middle .bike-img{
   width: 15vw;
   height: 15vw;
   position: absolute;
   top: 20vw;
   left: 70vw;
-  transform: rotate(45deg -90deg);
+  background-image: url('/img/service/LOGO-腳踏車.png');
+  display: block;
+  background-size: contain;
+  z-index: 1;
 }
 
 #bottom {
