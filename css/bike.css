@@ -842,7 +842,7 @@ main .veiw .bike.jump {
 
 main .veiw .cloud {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   top: -100px;
   width: 500px;
   height: 200px;
@@ -878,7 +878,7 @@ main .veiw .tree {
   height: 400px;
   position: absolute;
   bottom: 23%;
-  z-index: -1;
+  z-index: -2;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -939,26 +939,26 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-2400px);
-          transform: translateX(-2400px);
+  -webkit-transform: translateX(-800px);
+          transform: translateX(-800px);
 }
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-3200px);
-          transform: translateX(-3200px);
+  -webkit-transform: translateX(-8000px);
+          transform: translateX(-8000px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-21600px);
-          transform: translateX(-21600px);
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-12800px);
-          transform: translateX(-12800px);
+  -webkit-transform: translateX(-16000px);
+          transform: translateX(-16000px);
 }
 
 main .veiw .tree.tree-5 {
@@ -969,26 +969,26 @@ main .veiw .tree.tree-5 {
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-28800px);
-          transform: translateX(-28800px);
+  -webkit-transform: translateX(-19200px);
+          transform: translateX(-19200px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-28000px);
-          transform: translateX(-28000px);
+  -webkit-transform: translateX(-50400px);
+          transform: translateX(-50400px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-38400px);
-          transform: translateX(-38400px);
+  -webkit-transform: translateX(-44800px);
+          transform: translateX(-44800px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-14400px);
-          transform: translateX(-14400px);
+  -webkit-transform: translateX(-64800px);
+          transform: translateX(-64800px);
 }
 
 main .veiw .grass {
@@ -1274,6 +1274,7 @@ main .veiw .marker-d-3 {
 
 main .veiw .marker-d-4 {
   right: -3990px;
+  top: 5%;
 }
 
 main .veiw .marker-d-5 {
@@ -1349,10 +1350,16 @@ main .veiw .building-3 {
 }
 
 main .veiw .building-3.df {
+  bottom: 140px;
+  right: -1800px;
+}
+
+main .veiw .building-3.df {
   background-image: none;
   width: 80px;
   height: 300px;
   background-color: #aaa;
+  border-radius: 5px;
   right: -4000px;
 }
 
@@ -1395,7 +1402,7 @@ main .veiw .building-4.df {
   width: 100px;
   height: 75px;
   background-color: #fff;
-  right: -8500px;
+  right: -7900px;
   bottom: 250px;
   color: #000;
   text-align: center;
@@ -1435,7 +1442,7 @@ main .veiw .building-6.df {
   background-image: url("/img/biking/蛋0.png");
   background-size: cover;
   z-index: -2;
-  right: -9300px;
+  right: -8500px;
   bottom: -400px;
   -webkit-transform: rotate(-40deg);
           transform: rotate(-40deg);
@@ -1446,6 +1453,42 @@ main .veiw .building-8.df {
   z-index: 8;
   right: -10700px;
   bottom: -200px;
+}
+
+main .veiw .building-9.df {
+  background-image: url("/img/biking/火車-03.png");
+  z-index: 8;
+  right: -12700px;
+  bottom: -200px;
+}
+
+main .veiw .building-12.df {
+  padding: 20px;
+  background-image: none;
+  width: 200px;
+  height: 400px;
+  background-color: #fd6767;
+  border: 2px salmon solid;
+  border-radius: 5px;
+  z-index: 8;
+  right: -23300px;
+  bottom: -200px;
+  color: #eee;
+  text-align: right;
+}
+
+main .veiw .building-12.df::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 0  200px 200px 0;
+}
+
+main .veiw .building-12.df h5 {
+  font-size: 25px;
 }
 
 main .veiw .KM {

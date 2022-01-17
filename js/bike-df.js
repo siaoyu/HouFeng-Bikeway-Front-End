@@ -150,6 +150,11 @@ function bikewayVeiw2(){
         <div class="building building-9 df"></div>
         <div class="building building-10 df"></div>
         <div class="building building-11 df"></div>
+        <div class="building building-12 df">
+            <h5>東勢客家園區</h5>
+            <h6>DongShi Hakka</h6>
+            <h6>Cultural Park</h6>
+        </div>
 
         <div class="info">
             <div class="info-title"></div>
@@ -249,7 +254,7 @@ let attractionText =[
         '豐榮水利之碑於昭和14年(1939年)設置，碑文記載葫蘆墩圳開設始末，為當時水利工程開發的歷史見證，碑體曾於921地震中毀損，由文化局進行修復完成。',
         '橫跨大甲溪的水壩，提供台中市農業、民生及工業用水主要水源區。不論遠看或近看皆是壯觀與宏偉，水壩上游攔水成為一個大湖，每當豐水時節，兩岸青山綠水，相連環抱，甚是迷人，下游則礫石成堆風光秀麗。',
         '劇變發生在921大地震，因為石岡車站正好位於斷層上，所以原有的月台和路軌都被拉扯擠壓，嚴重扭曲變形，甚至還產生了將近5公尺高的地勢落差。',
-        '日治大正年間，日人為管理臺灣稻米農作產銷，於各地設置信用組合，二戰後才改為農會組織。農業曾是早期民生、經濟的主要命脈，稻米生產更是石岡的農產主力，當時的碾米穀倉工廠極具重要地位。',
+        '據說「0蛋月台」的名稱源自於「零擔月台」，因為早期石岡地區的農產品會以零擔貨運（註）的方式，從這個月台送上火車運往豐原、台中販售，所以採用這個有趣的諧音。',
         '情人木橋位於食水嵙溪上，長40公尺寬3.5公尺的木橋，全橋沒有橋墩支撐，台灣第一次引進木橋建設技術，可防七級以上強震，更是遠東地區跨距最長的景觀木橋。夜間燈火點亮，就如浪漫的七夕情人橋。',
         '東勢線的梅子站設於一處彎道上，大致上位於梅子社區地圖上的中心位置，現在這段自行車道有一處遮棚可供休息，而真正的車站位置是在其東邊。',
         '梅子鐵橋是跨越大甲溪連接石岡區與東勢區的橋梁，作為東豐自行車綠廊豐原端與后豐鐵馬道相接，且為大東勢地區重要的觀光據點。每當遊客騎到梅子鐵橋時，大多會停駐片刻，欣賞大甲溪溪畔風光，或是拍照留念。',
@@ -362,16 +367,22 @@ function dfBikeway(){
             deleteText();
         }else if (kNum > 4.2) {
             infoElemet.classList.add('open')
-            attractionName.textContent = '石岡穀倉';
+            attractionName.textContent = '0蛋月台';
             attractionDescription.textContent = attractionText[5][6];
+            bikeElement.style.transform = `translateY(-60px) rotate(0deg)`;
         } else if (kNum > 4.1) {
             deleteText();
-        } else if (kNum > 3.8) {
+            bikeElement.style.transform = `translateY(0px) rotate(-30deg)`;
+        }else if (kNum > 3.9){
+            bikeElement.style.transform = `translateY(70px) rotate(0deg)`;
+        }else if (kNum > 3.8) {
             infoElemet.classList.add('open')
             attractionName.textContent = '石岡斷層月台';
             attractionDescription.textContent = attractionText[5][5];
+            bikeElement.style.transform = `translateY(70px) rotate(30deg)`;
         } else if (kNum > 3.3) {
             deleteText();
+            bikeElement.style.transform = `translateY(0px) rotate(0deg)`
         } else if (kNum > 2.9) {
             infoElemet.classList.add('open')
             attractionName.textContent = '石岡水壩';
@@ -398,13 +409,13 @@ function dfBikeway(){
         } else if (kNum > 0.8) {
             deleteText();
         } else if (kNum > 0.4) {
-            bikeElement.style.transform = `translateY(0px)`;
+            bikeElement.style.transform = `translateY(0px) rotate(0deg)`;
             infoElemet.classList.add('open');
             infoElemet.style.backgroundImage ='url("")'
             attractionName.textContent = '朴口車站';
             attractionDescription.textContent = attractionText[5][0];
         } else if (kNum <= 0.4) {
-            bikeElement.style.transform = `translateY(-60px)`;
+            bikeElement.style.transform = `translateY(-60px) rotate(-20deg)`;
             deleteText();
         }
        

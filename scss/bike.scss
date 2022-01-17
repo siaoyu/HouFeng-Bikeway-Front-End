@@ -582,7 +582,7 @@ main{
 
         .cloud {
             position: absolute;
-            z-index: -1;
+            z-index: -2;
             top: -100px;
             width: 500px;
             height: 200px;
@@ -614,7 +614,7 @@ main{
             height: 400px;
             position: absolute;
             bottom: 23%;
-            z-index: -1;
+            z-index: -2;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -893,6 +893,7 @@ main{
         }
         .marker-d-4{
             right: -3990px;
+            top: 5%;
         }
         .marker-d-5{
             right: -5200px;
@@ -953,11 +954,16 @@ main{
             right: -4200px;
             bottom: 80px;
             &.df{
+                bottom: 140px;
+                right: -1800px;
+            }
 
+            &.df{
                 background-image: none;
                 width: 80px;
                 height: 300px;
                 background-color: #aaa;
+                border-radius: 5px;
                 right: -4000px;
                 &::before{
                     content: '';
@@ -996,7 +1002,7 @@ main{
                 width: 100px;
                 height: 75px;
                 background-color: #fff;
-                right: -8500px;
+                right: -7900px;
                 bottom: 250px;
                 color: #000;
                 text-align: center;
@@ -1035,11 +1041,12 @@ main{
                 background-image: url("/img/biking/蛋0.png");
                 background-size: cover;
                 z-index:-2;
-                right: -9300px;
+                right: -8500px;
                 bottom: -400px;
                 transform: rotate(-40deg);
             }
         }
+        
         .building-8{
             //情人木橋
             &.df{
@@ -1047,6 +1054,44 @@ main{
                 z-index: 8;
                 right: -10700px;
                 bottom: -200px;
+            }
+        }
+        .building-9{
+            //情人木橋
+            &.df{
+                background-image: url("/img/biking/火車-03.png");
+                z-index: 8;
+                right: -12700px;
+                bottom: -200px;
+            }
+        }
+        .building-12{
+            //東勢客家園區
+            &.df{
+                padding: 20px;
+                background-image: none;
+                width: 200px;
+                height: 400px;
+                background-color: rgb(253, 103, 103);
+                border: 2px salmon solid;
+                border-radius: 5px;
+                z-index: 8;
+                right: -23300px;
+                bottom: -200px;
+                color: #eee;
+                text-align: right;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 100px;
+                    height: 200px;
+                    background-color: #000;
+                    border-radius:  0  200px 200px 0;
+                }
+                h5{
+                    font-size: 25px;
+                }
             }
         }
 
