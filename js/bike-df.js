@@ -138,7 +138,11 @@ function bikewayVeiw2(){
         <div class="building building-1 df"></div>
         <div class="building building-2 df"></div>
         <div class="building building-3 df"></div>
-        <div class="building building-4 df"></div>
+        <div class="building building-4 df">
+            <h5>石岡</h5>
+            <h6>豐原 <i class="fas fa-arrows-alt-h"></i> 東勢</h6>
+            <h5>0蛋月台</h5>
+        </div>
         <div class="building building-5 df"></div>
         <div class="building building-6 df"></div>
         <div class="building building-7 df"></div>

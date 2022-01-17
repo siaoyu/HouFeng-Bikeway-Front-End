@@ -939,56 +939,56 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-800px);
-          transform: translateX(-800px);
+  -webkit-transform: translateX(-2400px);
+          transform: translateX(-2400px);
 }
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-12800px);
-          transform: translateX(-12800px);
-}
-
-main .veiw .tree.tree-3 {
-  right: -2100px;
-  -webkit-transform: translateX(-14400px);
-          transform: translateX(-14400px);
-}
-
-main .veiw .tree.tree-4 {
-  right: -2800px;
   -webkit-transform: translateX(-3200px);
           transform: translateX(-3200px);
 }
 
+main .veiw .tree.tree-3 {
+  right: -2100px;
+  -webkit-transform: translateX(-21600px);
+          transform: translateX(-21600px);
+}
+
+main .veiw .tree.tree-4 {
+  right: -2800px;
+  -webkit-transform: translateX(-12800px);
+          transform: translateX(-12800px);
+}
+
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-36000px);
-          transform: translateX(-36000px);
+  -webkit-transform: translateX(-12000px);
+          transform: translateX(-12000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-19200px);
-          transform: translateX(-19200px);
+  -webkit-transform: translateX(-28800px);
+          transform: translateX(-28800px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-11200px);
-          transform: translateX(-11200px);
+  -webkit-transform: translateX(-28000px);
+          transform: translateX(-28000px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-25600px);
-          transform: translateX(-25600px);
+  -webkit-transform: translateX(-38400px);
+          transform: translateX(-38400px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-50400px);
-          transform: translateX(-50400px);
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
 }
 
 main .veiw .grass {
@@ -1273,7 +1273,7 @@ main .veiw .marker-d-3 {
 }
 
 main .veiw .marker-d-4 {
-  right: -4000px;
+  right: -3990px;
 }
 
 main .veiw .marker-d-5 {
@@ -1349,8 +1349,70 @@ main .veiw .building-3 {
 }
 
 main .veiw .building-3.df {
-  background-image: url("/");
-  right: -2100px;
+  background-image: none;
+  width: 80px;
+  height: 300px;
+  background-color: #aaa;
+  right: -4000px;
+}
+
+main .veiw .building-3.df::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  -webkit-box-shadow: 0 10px 0 0  #333, 0 20px 0 0  #333, 0 30px 0 0  #333;
+          box-shadow: 0 10px 0 0  #333, 0 20px 0 0  #333, 0 30px 0 0  #333;
+}
+
+main .veiw .building-3.df::after {
+  content: '榮豐水利碑';
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 170px;
+  font-size: 25px;
+  font-weight: 900;
+  text-align: center;
+  color: #565f2f;
+  background-color: #999;
+  border-radius: 15px;
+}
+
+main .veiw .building-4 {
+  width: 720px;
+  height: 405px;
+  background-image: none;
+  right: -8500px;
+  bottom: 115px;
+}
+
+main .veiw .building-4.df {
+  padding-top: 10px;
+  width: 100px;
+  height: 75px;
+  background-color: #fff;
+  right: -8500px;
+  bottom: 250px;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+main .veiw .building-4.df::before {
+  content: '';
+  position: absolute;
+  top: 75px;
+  left: 20px;
+  width: 10px;
+  height: 100px;
+  background-color: #ddd;
+  -webkit-box-shadow: 50px 0 0 0 #ddd;
+          box-shadow: 50px 0 0 0 #ddd;
 }
 
 main .veiw .building-5 {
@@ -1365,6 +1427,18 @@ main .veiw .building-5.df {
   background-image: url("/img/biking/水庫-02.png");
   right: -5600px;
   bottom: 80px;
+}
+
+main .veiw .building-6.df {
+  width: 1890px;
+  height: 1417px;
+  background-image: url("/img/biking/蛋0.png");
+  background-size: cover;
+  z-index: -2;
+  right: -9300px;
+  bottom: -400px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
 }
 
 main .veiw .building-8.df {

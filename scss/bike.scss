@@ -892,7 +892,7 @@ main{
             top: 5%;
         }
         .marker-d-4{
-            right: -4000px;
+            right: -3990px;
         }
         .marker-d-5{
             right: -5200px;
@@ -953,8 +953,66 @@ main{
             right: -4200px;
             bottom: 80px;
             &.df{
-                background-image: url("/");
-                right: -2100px;
+
+                background-image: none;
+                width: 80px;
+                height: 300px;
+                background-color: #aaa;
+                right: -4000px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 80px;
+                    height: 5px;
+                    box-shadow: 0 10px 0 0  #333,
+                                0 20px 0 0  #333,
+                                0 30px 0 0  #333;
+                }
+                &::after{
+                    content: '榮豐水利碑';
+                    position: absolute;
+                    left: 50%;
+                    top: 40px;
+                    transform: translateX(-50%);
+                    width: 40px;
+                    height: 170px;
+                    font-size: 25px;
+                    font-weight: 900;
+                    text-align: center;
+                    color: rgb(86, 95, 47);
+                    background-color: #999;
+                    border-radius: 15px;
+                }
+            }
+        }
+        .building-4{
+            width: 720px;
+            height: 405px;
+            background-image: none;
+            right: -8500px;
+            bottom: 115px;
+            &.df{
+                padding-top: 10px;
+                width: 100px;
+                height: 75px;
+                background-color: #fff;
+                right: -8500px;
+                bottom: 250px;
+                color: #000;
+                text-align: center;
+                border-radius: 5px;
+                z-index: -1;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 75px;
+                    left: 20px;
+                    width: 10px;
+                    height: 100px;
+                    background-color: #ddd;
+                    box-shadow:  50px 0 0 0 #ddd;
+
+                }
             }
         }
         .building-5{
@@ -969,7 +1027,19 @@ main{
                 bottom: 80px;
             }
         }
-
+        .building-6{
+            //0蛋月台
+            &.df{
+                width: 1890px;
+                height: 1417px;
+                background-image: url("/img/biking/蛋0.png");
+                background-size: cover;
+                z-index:-2;
+                right: -9300px;
+                bottom: -400px;
+                transform: rotate(-40deg);
+            }
+        }
         .building-8{
             //情人木橋
             &.df{
