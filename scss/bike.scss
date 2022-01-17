@@ -768,7 +768,9 @@ main{
             background-size: cover;
             background-repeat: no-repeat;
             &.df{
-                right: -11500px;
+                //梅子鐵橋
+                right: -15800px;
+                bottom: -63%;
             }
         }
         .info{
@@ -784,6 +786,7 @@ main{
             background-size: cover;
             background-repeat: no-repeat;
             .info-description{
+                
                 font-size: 1.5rem;
                 color: transparent;
                 transition: 1s;
@@ -809,10 +812,15 @@ main{
                         }
                     }
                 }
-                .df-link{  
-                    position: relative;
-                    bottom: -100px;
+                .df-link{ 
+                    color: #000; 
+                    text-decoration: none;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    left: 50%;
+                    bottom: 12%;
                     display: block;
+                    
                 }
             }
             &.open{
@@ -876,16 +884,19 @@ main{
             right: -400px;
         }
         .marker-d-2{
-            right: -1400px;
+            right: -1500px;
+            top: 5%;
         }
         .marker-d-3{
-            right: -3400px;
+            right: -3100px;
+            top: 5%;
         }
         .marker-d-4{
             right: -4000px;
         }
         .marker-d-5{
-            right: -5100px;
+            right: -5200px;
+            top: 5%;
         }
         .marker-d-6{
             right: -7100px;
@@ -922,14 +933,17 @@ main{
             background-image: url("/img/biking/商店-02.png");
             right: -600px;
             &.df{
+                background-image: url("/img/biking/火車-02.png");
                 right: -600px;
+                width:  700px;
             }
         }
         .building-2{
-            background-image: url("/img/biking/商店-02.png");
+            background-image: url("/img/biking/商店-01.png");
             right: -600px;
             &.df{
-                right: -600px;
+                bottom: 140px;
+                right: -1800px;
             }
         }
         .building-3{
@@ -939,8 +953,8 @@ main{
             right: -4200px;
             bottom: 80px;
             &.df{
-                background-image: url("/img/biking/商店-02.png");
-                right: -600px;
+                background-image: url("/");
+                right: -2100px;
             }
         }
         .building-5{
@@ -949,6 +963,21 @@ main{
             background-image: url("/img/biking/馬-01.png");
             right: -8500px;
             bottom: 115px;
+            &.df{
+                background-image: url("/img/biking/水庫-02.png");
+                right: -5600px;
+                bottom: 80px;
+            }
+        }
+
+        .building-8{
+            //情人木橋
+            &.df{
+                background-image: url("/img/biking/木橋-01.png");
+                z-index: 8;
+                right: -10700px;
+                bottom: -200px;
+            }
         }
 
         .KM{
@@ -990,16 +1019,16 @@ main{
             right: -400px;
         }
         .km-d-2{
-            right: -1400px;
+            right: -1600px;
         }
         .km-d-3{
-            right: -3400px;
+            right: -3200px;
         }
         .km-d-4{
             right: -4000px;
         }
         .km-d-5{
-            right: -5100px;
+            right: -5300px;
         }
         .km-d-6{
             right: -7100px;

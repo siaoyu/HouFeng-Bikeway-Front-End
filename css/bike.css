@@ -939,32 +939,32 @@ main .veiw .tree-9 {
 
 main .veiw .tree.tree-1 {
   right: -700px;
-  -webkit-transform: translateX(-3200px);
-          transform: translateX(-3200px);
+  -webkit-transform: translateX(-800px);
+          transform: translateX(-800px);
 }
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-9600px);
-          transform: translateX(-9600px);
-}
-
-main .veiw .tree.tree-3 {
-  right: -2100px;
-  -webkit-transform: translateX(-12000px);
-          transform: translateX(-12000px);
-}
-
-main .veiw .tree.tree-4 {
-  right: -2800px;
   -webkit-transform: translateX(-12800px);
           transform: translateX(-12800px);
 }
 
+main .veiw .tree.tree-3 {
+  right: -2100px;
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
+}
+
+main .veiw .tree.tree-4 {
+  right: -2800px;
+  -webkit-transform: translateX(-3200px);
+          transform: translateX(-3200px);
+}
+
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-20000px);
-          transform: translateX(-20000px);
+  -webkit-transform: translateX(-36000px);
+          transform: translateX(-36000px);
 }
 
 main .veiw .tree.tree-6 {
@@ -975,8 +975,8 @@ main .veiw .tree.tree-6 {
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-22400px);
-          transform: translateX(-22400px);
+  -webkit-transform: translateX(-11200px);
+          transform: translateX(-11200px);
 }
 
 main .veiw .tree.tree-8 {
@@ -987,8 +987,8 @@ main .veiw .tree.tree-8 {
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-21600px);
-          transform: translateX(-21600px);
+  -webkit-transform: translateX(-50400px);
+          transform: translateX(-50400px);
 }
 
 main .veiw .grass {
@@ -1115,7 +1115,8 @@ main .veiw .brige {
 }
 
 main .veiw .brige.df {
-  right: -11500px;
+  right: -15800px;
+  bottom: -63%;
 }
 
 main .veiw .info {
@@ -1175,8 +1176,13 @@ main .veiw .info .info-description .index-link {
 }
 
 main .veiw .info .info-description .df-link {
-  position: relative;
-  bottom: -100px;
+  color: #000;
+  text-decoration: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
   display: block;
 }
 
@@ -1257,11 +1263,13 @@ main .veiw .marker-d-1 {
 }
 
 main .veiw .marker-d-2 {
-  right: -1400px;
+  right: -1500px;
+  top: 5%;
 }
 
 main .veiw .marker-d-3 {
-  right: -3400px;
+  right: -3100px;
+  top: 5%;
 }
 
 main .veiw .marker-d-4 {
@@ -1269,7 +1277,8 @@ main .veiw .marker-d-4 {
 }
 
 main .veiw .marker-d-5 {
-  right: -5100px;
+  right: -5200px;
+  top: 5%;
 }
 
 main .veiw .marker-d-6 {
@@ -1316,16 +1325,19 @@ main .veiw .building-1 {
 }
 
 main .veiw .building-1.df {
+  background-image: url("/img/biking/火車-02.png");
   right: -600px;
+  width: 700px;
 }
 
 main .veiw .building-2 {
-  background-image: url("/img/biking/商店-02.png");
+  background-image: url("/img/biking/商店-01.png");
   right: -600px;
 }
 
 main .veiw .building-2.df {
-  right: -600px;
+  bottom: 140px;
+  right: -1800px;
 }
 
 main .veiw .building-3 {
@@ -1337,8 +1349,8 @@ main .veiw .building-3 {
 }
 
 main .veiw .building-3.df {
-  background-image: url("/img/biking/商店-02.png");
-  right: -600px;
+  background-image: url("/");
+  right: -2100px;
 }
 
 main .veiw .building-5 {
@@ -1347,6 +1359,19 @@ main .veiw .building-5 {
   background-image: url("/img/biking/馬-01.png");
   right: -8500px;
   bottom: 115px;
+}
+
+main .veiw .building-5.df {
+  background-image: url("/img/biking/水庫-02.png");
+  right: -5600px;
+  bottom: 80px;
+}
+
+main .veiw .building-8.df {
+  background-image: url("/img/biking/木橋-01.png");
+  z-index: 8;
+  right: -10700px;
+  bottom: -200px;
 }
 
 main .veiw .KM {
@@ -1396,11 +1421,11 @@ main .veiw .km-d-1 {
 }
 
 main .veiw .km-d-2 {
-  right: -1400px;
+  right: -1600px;
 }
 
 main .veiw .km-d-3 {
-  right: -3400px;
+  right: -3200px;
 }
 
 main .veiw .km-d-4 {
@@ -1408,7 +1433,7 @@ main .veiw .km-d-4 {
 }
 
 main .veiw .km-d-5 {
-  right: -5100px;
+  right: -5300px;
 }
 
 main .veiw .km-d-6 {

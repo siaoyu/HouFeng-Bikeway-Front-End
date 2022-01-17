@@ -106,7 +106,7 @@ body {
   height: 15vw;
   position: absolute;
   top: 20vw;
-  left: 70vw;
+  right: 14vw;
   background-image: url('/img/service/LOGO-腳踏車.png');
   display: block;
   background-size: contain;
