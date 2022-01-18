@@ -342,6 +342,7 @@ function dfBikeway(){
         } else if (kNum > 10.2) {
             deleteText();
         }else if (kNum > 9.8) {
+           
             infoElemet.classList.add('open')
             attractionName.textContent = '鯉魚伯公公園';
             attractionDescription.textContent = attractionText[5][10];

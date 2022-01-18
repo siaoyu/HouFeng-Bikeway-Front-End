@@ -1065,6 +1065,46 @@ main{
                 bottom: -200px;
             }
         }
+        .building-11{
+            //斜張橋
+            &.df{
+                width: 1500px;
+                height: 1500px;
+                background-color: transparent;
+                border: 50px #fa0 solid;
+                border-radius: 50%;
+                z-index: 8;
+                right: -20500px;
+                bottom: -800px;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    z-index: 8;
+                    width: 30px;
+                    height: 900px;
+                    background-color: #fff;
+                    left: 80px;
+                    bottom: 60%;
+                    box-shadow: 100px 0 0 0 #fff,
+                    300px 0 0 0 #fff,
+                    500px 0 0 0 #fff,
+                    700px 0 0 0 #fff,
+                    900px 0 0 0 #fff,
+                    1100px 0 0 0 #fff  ,
+                    1300px 0 0 0 #fff  ;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    z-index: 9;
+                    width: 1400px;
+                    height: 200px;
+                    background: #fa0;
+                    bottom: 50%;
+                }
+            }
+        }
         .building-12{
             //東勢客家園區
             &.df{

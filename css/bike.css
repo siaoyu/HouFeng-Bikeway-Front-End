@@ -945,50 +945,50 @@ main .veiw .tree.tree-1 {
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-8000px);
-          transform: translateX(-8000px);
+  -webkit-transform: translateX(-1600px);
+          transform: translateX(-1600px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-7200px);
-          transform: translateX(-7200px);
+  -webkit-transform: translateX(-12000px);
+          transform: translateX(-12000px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-9600px);
-          transform: translateX(-9600px);
+  -webkit-transform: translateX(-3200px);
+          transform: translateX(-3200px);
 }
 
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-8000px);
-          transform: translateX(-8000px);
+  -webkit-transform: translateX(-4000px);
+          transform: translateX(-4000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-38400px);
-          transform: translateX(-38400px);
+  -webkit-transform: translateX(-4800px);
+          transform: translateX(-4800px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-16800px);
-          transform: translateX(-16800px);
+  -webkit-transform: translateX(-5600px);
+          transform: translateX(-5600px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-44800px);
-          transform: translateX(-44800px);
+  -webkit-transform: translateX(-12800px);
+          transform: translateX(-12800px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-7200px);
-          transform: translateX(-7200px);
+  -webkit-transform: translateX(-64800px);
+          transform: translateX(-64800px);
 }
 
 main .veiw .grass {
@@ -1460,6 +1460,41 @@ main .veiw .building-9.df {
   z-index: 8;
   right: -12700px;
   bottom: -200px;
+}
+
+main .veiw .building-11.df {
+  width: 1500px;
+  height: 1500px;
+  background-color: transparent;
+  border: 50px #fa0 solid;
+  border-radius: 50%;
+  z-index: 8;
+  right: -20500px;
+  bottom: -800px;
+  overflow: hidden;
+}
+
+main .veiw .building-11.df::before {
+  content: '';
+  position: absolute;
+  z-index: 8;
+  width: 30px;
+  height: 900px;
+  background-color: #fff;
+  left: 80px;
+  bottom: 60%;
+  -webkit-box-shadow: 100px 0 0 0 #fff, 300px 0 0 0 #fff, 500px 0 0 0 #fff, 700px 0 0 0 #fff, 900px 0 0 0 #fff, 1100px 0 0 0 #fff  , 1300px 0 0 0 #fff;
+          box-shadow: 100px 0 0 0 #fff, 300px 0 0 0 #fff, 500px 0 0 0 #fff, 700px 0 0 0 #fff, 900px 0 0 0 #fff, 1100px 0 0 0 #fff  , 1300px 0 0 0 #fff;
+}
+
+main .veiw .building-11.df::after {
+  content: '';
+  position: absolute;
+  z-index: 9;
+  width: 1400px;
+  height: 200px;
+  background: #fa0;
+  bottom: 50%;
 }
 
 main .veiw .building-12.df {
