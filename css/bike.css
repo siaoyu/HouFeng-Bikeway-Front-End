@@ -507,7 +507,7 @@ main .veiw .road::after {
 main .veiw .camera {
   position: absolute;
   z-index: 10;
-  top: 20%;
+  bottom: 400px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -945,50 +945,50 @@ main .veiw .tree.tree-1 {
 
 main .veiw .tree.tree-2 {
   right: -1400px;
-  -webkit-transform: translateX(-1600px);
-          transform: translateX(-1600px);
+  -webkit-transform: translateX(-14400px);
+          transform: translateX(-14400px);
 }
 
 main .veiw .tree.tree-3 {
   right: -2100px;
-  -webkit-transform: translateX(-12000px);
-          transform: translateX(-12000px);
+  -webkit-transform: translateX(-9600px);
+          transform: translateX(-9600px);
 }
 
 main .veiw .tree.tree-4 {
   right: -2800px;
-  -webkit-transform: translateX(-3200px);
-          transform: translateX(-3200px);
+  -webkit-transform: translateX(-28800px);
+          transform: translateX(-28800px);
 }
 
 main .veiw .tree.tree-5 {
   right: -3500px;
-  -webkit-transform: translateX(-4000px);
-          transform: translateX(-4000px);
+  -webkit-transform: translateX(-24000px);
+          transform: translateX(-24000px);
 }
 
 main .veiw .tree.tree-6 {
   right: -4200px;
-  -webkit-transform: translateX(-4800px);
-          transform: translateX(-4800px);
+  -webkit-transform: translateX(-24000px);
+          transform: translateX(-24000px);
 }
 
 main .veiw .tree.tree-7 {
   right: -4900px;
-  -webkit-transform: translateX(-5600px);
-          transform: translateX(-5600px);
+  -webkit-transform: translateX(-33600px);
+          transform: translateX(-33600px);
 }
 
 main .veiw .tree.tree-8 {
   right: -5600px;
-  -webkit-transform: translateX(-12800px);
-          transform: translateX(-12800px);
+  -webkit-transform: translateX(-44800px);
+          transform: translateX(-44800px);
 }
 
 main .veiw .tree.tree-9 {
   right: -6300px;
-  -webkit-transform: translateX(-64800px);
-          transform: translateX(-64800px);
+  -webkit-transform: translateX(-28800px);
+          transform: translateX(-28800px);
 }
 
 main .veiw .grass {
@@ -1069,6 +1069,7 @@ main .veiw .none {
 
 main .veiw .streetLight {
   position: absolute;
+  bottom: 200px;
   z-index: -2;
   width: 700px;
   height: 400px;
@@ -1103,7 +1104,7 @@ main .veiw .streetLight-4 {
 
 main .veiw .brige {
   position: absolute;
-  bottom: -45%;
+  bottom: -400px;
   right: -3000px;
   z-index: 7;
   width: 1640px;
@@ -1116,7 +1117,7 @@ main .veiw .brige {
 
 main .veiw .brige.df {
   right: -15800px;
-  bottom: -63%;
+  bottom: -400px;
 }
 
 main .veiw .info {
@@ -1229,7 +1230,7 @@ main .veiw .info.open .info-description {
 main .veiw .marker {
   position: absolute;
   z-index: 8;
-  top: 20%;
+  bottom: 500px;
   width: 60px;
   height: 90px;
   background-image: url("/img/biking/地標-01.png");
@@ -1238,7 +1239,6 @@ main .veiw .marker {
 }
 
 main .veiw .marker-1 {
-  top: 300px;
   right: -400px;
 }
 
@@ -1264,22 +1264,22 @@ main .veiw .marker-d-1 {
 
 main .veiw .marker-d-2 {
   right: -1500px;
-  top: 5%;
+  bottom:  30%;
 }
 
 main .veiw .marker-d-3 {
   right: -3100px;
-  top: 5%;
+  bottom:  30%;
 }
 
 main .veiw .marker-d-4 {
   right: -3990px;
-  top: 5%;
+  bottom:  30%;
 }
 
 main .veiw .marker-d-5 {
   right: -5200px;
-  top: 5%;
+  bottom:  30%;
 }
 
 main .veiw .marker-d-6 {
@@ -1323,6 +1323,8 @@ main .veiw .building {
 main .veiw .building-1 {
   background-image: url("/img/biking/商店-02.png");
   right: -600px;
+  width: 500px;
+  bottom: 65px;
 }
 
 main .veiw .building-1.df {
@@ -1332,11 +1334,12 @@ main .veiw .building-1.df {
 }
 
 main .veiw .building-2 {
-  background-image: url("/img/biking/商店-01.png");
+  background-image: none;
   right: -600px;
 }
 
 main .veiw .building-2.df {
+  background-image: url("/img/biking/商店-01.png");
   bottom: 140px;
   right: -1800px;
 }
@@ -1368,8 +1371,12 @@ main .veiw .building-3.df::before {
   position: absolute;
   width: 80px;
   height: 5px;
-  -webkit-box-shadow: 0 10px 0 0  #333, 0 20px 0 0  #333, 0 30px 0 0  #333;
-          box-shadow: 0 10px 0 0  #333, 0 20px 0 0  #333, 0 30px 0 0  #333;
+  -webkit-box-shadow: 0 10px 0 0  #333,
+ 0 20px 0 0  #333,
+ 0 30px 0 0  #333;
+          box-shadow: 0 10px 0 0  #333,
+ 0 20px 0 0  #333,
+ 0 30px 0 0  #333;
 }
 
 main .veiw .building-3.df::after {
@@ -1458,8 +1465,8 @@ main .veiw .building-8.df {
 main .veiw .building-9.df {
   background-image: url("/img/biking/火車-03.png");
   z-index: 8;
-  right: -12700px;
-  bottom: -200px;
+  right: -12800px;
+  bottom: -150px;
 }
 
 main .veiw .building-11.df {
@@ -1483,8 +1490,20 @@ main .veiw .building-11.df::before {
   background-color: #fff;
   left: 80px;
   bottom: 60%;
-  -webkit-box-shadow: 100px 0 0 0 #fff, 300px 0 0 0 #fff, 500px 0 0 0 #fff, 700px 0 0 0 #fff, 900px 0 0 0 #fff, 1100px 0 0 0 #fff  , 1300px 0 0 0 #fff;
-          box-shadow: 100px 0 0 0 #fff, 300px 0 0 0 #fff, 500px 0 0 0 #fff, 700px 0 0 0 #fff, 900px 0 0 0 #fff, 1100px 0 0 0 #fff  , 1300px 0 0 0 #fff;
+  -webkit-box-shadow: 100px 0 0 0 #fff,
+ 300px 0 0 0 #fff,
+ 500px 0 0 0 #fff,
+ 700px 0 0 0 #fff,
+ 900px 0 0 0 #fff,
+ 1100px 0 0 0 #fff  ,
+ 1300px 0 0 0 #fff;
+          box-shadow: 100px 0 0 0 #fff,
+ 300px 0 0 0 #fff,
+ 500px 0 0 0 #fff,
+ 700px 0 0 0 #fff,
+ 900px 0 0 0 #fff,
+ 1100px 0 0 0 #fff  ,
+ 1300px 0 0 0 #fff;
 }
 
 main .veiw .building-11.df::after {
